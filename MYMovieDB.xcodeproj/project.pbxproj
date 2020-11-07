@@ -32,6 +32,7 @@
 		8CEBE47125571447006A5FAE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE47025571447006A5FAE /* Theme.swift */; };
 		8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE475255717ED006A5FAE /* UIColor.swift */; };
 		8CEBE48825571B16006A5FAE /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE48725571B16006A5FAE /* UINavigationBar.swift */; };
+		8CEBE492255721DF006A5FAE /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE491255721DF006A5FAE /* StatusView.swift */; };
 		8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE496255724DB006A5FAE /* UIView+Layout.swift */; };
 		8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */; };
 		8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4AC25572797006A5FAE /* Layout.swift */; };
@@ -88,6 +89,7 @@
 		8CEBE47025571447006A5FAE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8CEBE475255717ED006A5FAE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8CEBE48725571B16006A5FAE /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		8CEBE491255721DF006A5FAE /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		8CEBE496255724DB006A5FAE /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		8CEBE4AC25572797006A5FAE /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				8CEBE4D12557347B006A5FAE /* LoadingView.swift */,
+				8CEBE491255721DF006A5FAE /* StatusView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			files = (
 				8CEBE43C2556E2C9006A5FAE /* Movie.swift in Sources */,
 				8CEBE4312556E20E006A5FAE /* MoviePopularListRequest.swift in Sources */,
+				8CEBE492255721DF006A5FAE /* StatusView.swift in Sources */,
 				8CEBE4262556DFC5006A5FAE /* ListViewModel.swift in Sources */,
 				8CEBE4602556EF24006A5FAE /* ListViewDataProtocol.swift in Sources */,
 				8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */,
