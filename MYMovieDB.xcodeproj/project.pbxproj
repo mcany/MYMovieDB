@@ -29,6 +29,8 @@
 		8CEBE4522556E84F006A5FAE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4512556E84F006A5FAE /* HTTPMethod.swift */; };
 		8CEBE4602556EF24006A5FAE /* ListViewDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE45F2556EF24006A5FAE /* ListViewDataProtocol.swift */; };
 		8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */; };
+		8CEBE47125571447006A5FAE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE47025571447006A5FAE /* Theme.swift */; };
+		8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE475255717ED006A5FAE /* UIColor.swift */; };
 		8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE496255724DB006A5FAE /* UIView+Layout.swift */; };
 		8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */; };
 		8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4AC25572797006A5FAE /* Layout.swift */; };
@@ -80,6 +82,8 @@
 		8CEBE4512556E84F006A5FAE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		8CEBE45F2556EF24006A5FAE /* ListViewDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataProtocol.swift; sourceTree = "<group>"; };
 		8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
+		8CEBE47025571447006A5FAE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		8CEBE475255717ED006A5FAE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8CEBE496255724DB006A5FAE /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		8CEBE4AC25572797006A5FAE /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				8CEBE3C82556B79F006A5FAE /* AppRouter.swift */,
+				8CEBE46F2557143A006A5FAE /* Common */,
 				8CEBE4242556DFB3006A5FAE /* List */,
 			);
 			path = Scenes;
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				8CEBE4462556E307006A5FAE /* Decodable.swift */,
+				8CEBE475255717ED006A5FAE /* UIColor.swift */,
 				8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */,
 				8CEBE496255724DB006A5FAE /* UIView+Layout.swift */,
 				8CEBE4012556C097006A5FAE /* URLRequest.swift */,
@@ -233,6 +239,14 @@
 				8CEBE43B2556E2C9006A5FAE /* Movie.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8CEBE46F2557143A006A5FAE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8CEBE47025571447006A5FAE /* Theme.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,11 +409,13 @@
 				8CEBE3D52556BAC7006A5FAE /* NetworkManager.swift in Sources */,
 				8CEBE4362556E224006A5FAE /* MoviePopularListResponse.swift in Sources */,
 				8CEBE3CF2556BA69006A5FAE /* Network.swift in Sources */,
+				8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */,
 				8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
 				8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */,
 				8CE0EF5C25569DD200F5C130 /* ViewController.swift in Sources */,
 				8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */,
+				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
 				8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */,
 				8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */,
