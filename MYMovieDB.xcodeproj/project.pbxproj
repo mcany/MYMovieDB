@@ -36,6 +36,7 @@
 		8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */; };
 		8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4AC25572797006A5FAE /* Layout.swift */; };
 		8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */; };
+		8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4D12557347B006A5FAE /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		8CEBE4AC25572797006A5FAE /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		8CEBE4D12557347B006A5FAE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,8 +253,17 @@
 			isa = PBXGroup;
 			children = (
 				8CEBE47025571447006A5FAE /* Theme.swift */,
+				8CEBE4C7255732B4006A5FAE /* Views */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		8CEBE4C7255732B4006A5FAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CEBE4D12557347B006A5FAE /* LoadingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +436,7 @@
 				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
 				8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */,
+				8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */,
 				8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */,
 				8CEBE4522556E84F006A5FAE /* HTTPMethod.swift in Sources */,
 				8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */,
