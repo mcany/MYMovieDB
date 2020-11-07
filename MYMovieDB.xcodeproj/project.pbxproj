@@ -146,6 +146,7 @@
 				8CE0EF5025569DD100F5C130 /* Sources */,
 				8CE0EF5125569DD100F5C130 /* Frameworks */,
 				8CE0EF5225569DD100F5C130 /* Resources */,
+				8CEBE3DC2556BB8A006A5FAE /* Swiftlint Run Script */,
 			);
 			buildRules = (
 			);
@@ -260,11 +261,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8CEBE3DC2556BB8A006A5FAE /* Swiftlint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiftlint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8CE0EF5025569DD100F5C130 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CEBE3D52556BAC7006A5FAE /* NetworkManager.swift in Sources */,
+				8CEBE3CF2556BA69006A5FAE /* Network.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
 				8CE0EF5C25569DD200F5C130 /* ViewController.swift in Sources */,
 				8CE0EF5825569DD200F5C130 /* AppDelegate.swift in Sources */,
