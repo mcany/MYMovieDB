@@ -7,9 +7,13 @@
 
 import UIKit
 
-final class ListViewController: UIViewController {
+final class ListViewController: ViewController {
 
-    private let viewModel: ListViewProtocol
+    // MARK: Properties
+
+    private var viewModel: ListViewProtocol
+
+    // MARK: Lifecycle
 
     init(with viewModel: ListViewProtocol) {
 
@@ -21,28 +25,43 @@ final class ListViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private lazy var helloWorldLabel: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         prepareViews()
+
+        viewModel.stateChangeHandler = { [unowned self] change in
+            self.apply(change)
+        }
         viewModel.fetchMovies()
     }
+}
+
+// MARK: Helpers
+
+extension ListViewController {
 
     private func prepareViews() {
 
+        // TODO: Add localization
         title = "My list"
-        view.backgroundColor = .white
-        view.addSubview(helloWorldLabel)
-        NSLayoutConstraint.activate([
-            helloWorldLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            helloWorldLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-        helloWorldLabel.text = "Hello World"
+    }
+}
+
+// MARK: State Change Handler
+
+private extension ListViewController {
+
+    func apply(_ change: ListViewState.Change) {
+        switch change {
+        case .loading(let isLoading):
+            isLoading ? showLoadingView() : removeLoadingView()
+        case .movies(let movies):
+            if movies.isNilOrEmpty {
+                // TODO: Add localization
+                showStatusView(iconName: "info",
+                               message: "Movie list is empty or cannot be loaded!")
+            }
+        }
     }
 }

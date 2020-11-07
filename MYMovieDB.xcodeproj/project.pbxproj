@@ -32,6 +32,7 @@
 		8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE475255717ED006A5FAE /* UIColor.swift */; };
 		8CEBE48025571A97006A5FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE47F25571A97006A5FAE /* ViewController.swift */; };
 		8CEBE48825571B16006A5FAE /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE48725571B16006A5FAE /* UINavigationBar.swift */; };
+		8CEBE48D255720FC006A5FAE /* ListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE48C255720FC006A5FAE /* ListViewState.swift */; };
 		8CEBE492255721DF006A5FAE /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE491255721DF006A5FAE /* StatusView.swift */; };
 		8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE496255724DB006A5FAE /* UIView+Layout.swift */; };
 		8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */; };
@@ -90,6 +91,7 @@
 		8CEBE475255717ED006A5FAE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8CEBE47F25571A97006A5FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8CEBE48725571B16006A5FAE /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		8CEBE48C255720FC006A5FAE /* ListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewState.swift; sourceTree = "<group>"; };
 		8CEBE491255721DF006A5FAE /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		8CEBE496255724DB006A5FAE /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				8CEBE3C32556B719006A5FAE /* ListViewController.swift */,
 				8CEBE4252556DFC5006A5FAE /* ListViewModel.swift */,
 				8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */,
+				8CEBE48C255720FC006A5FAE /* ListViewState.swift */,
 				8CEBE43A2556E2AA006A5FAE /* Models */,
 				8CEBE42A2556DFFD006A5FAE /* Network */,
 			);
@@ -451,6 +454,7 @@
 				8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */,
 				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
+				8CEBE48D255720FC006A5FAE /* ListViewState.swift in Sources */,
 				8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */,
 				8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */,
 				8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */,

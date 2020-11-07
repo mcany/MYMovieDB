@@ -7,6 +7,9 @@
 
 protocol ListViewProtocol {
 
+    /// State change handler to handle changes
+    var stateChangeHandler: ListViewStateOnChange? { get set }
+
     /// Fetches movies
     func fetchMovies()
 }
