@@ -14,13 +14,13 @@ final class ListViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         prepareViews()
     }
-    
+
     private func prepareViews() {
         title = "My list"
         view.backgroundColor = .white
