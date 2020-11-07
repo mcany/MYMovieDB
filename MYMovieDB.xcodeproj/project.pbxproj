@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8CE0EF5825569DD200F5C130 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF5725569DD200F5C130 /* AppDelegate.swift */; };
-		8CE0EF5C25569DD200F5C130 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF5B25569DD200F5C130 /* ViewController.swift */; };
 		8CE0EF6125569DD500F5C130 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0EF6025569DD500F5C130 /* Assets.xcassets */; };
 		8CE0EF6425569DD500F5C130 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0EF6225569DD500F5C130 /* LaunchScreen.storyboard */; };
 		8CE0EF6F25569DD500F5C130 /* MYMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0EF6E25569DD500F5C130 /* MYMovieDBTests.swift */; };
@@ -31,6 +30,7 @@
 		8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */; };
 		8CEBE47125571447006A5FAE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE47025571447006A5FAE /* Theme.swift */; };
 		8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE475255717ED006A5FAE /* UIColor.swift */; };
+		8CEBE48025571A97006A5FAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE47F25571A97006A5FAE /* ViewController.swift */; };
 		8CEBE48825571B16006A5FAE /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE48725571B16006A5FAE /* UINavigationBar.swift */; };
 		8CEBE492255721DF006A5FAE /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE491255721DF006A5FAE /* StatusView.swift */; };
 		8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE496255724DB006A5FAE /* UIView+Layout.swift */; };
@@ -61,7 +61,6 @@
 /* Begin PBXFileReference section */
 		8CE0EF5425569DD100F5C130 /* MYMovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYMovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CE0EF5725569DD200F5C130 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CE0EF5B25569DD200F5C130 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8CE0EF6025569DD500F5C130 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CE0EF6325569DD500F5C130 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CE0EF6525569DD500F5C130 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
 		8CEBE47025571447006A5FAE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8CEBE475255717ED006A5FAE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8CEBE47F25571A97006A5FAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8CEBE48725571B16006A5FAE /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		8CEBE491255721DF006A5FAE /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		8CEBE496255724DB006A5FAE /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 			children = (
 				8CE0EF6525569DD500F5C130 /* Info.plist */,
 				8CE0EF5725569DD200F5C130 /* AppDelegate.swift */,
-				8CE0EF5B25569DD200F5C130 /* ViewController.swift */,
 				8CE0EF6025569DD500F5C130 /* Assets.xcassets */,
 				8CEBE3CD2556BA52006A5FAE /* Constants */,
 				8CEBE4002556C07C006A5FAE /* Extensions */,
@@ -259,6 +258,7 @@
 			children = (
 				8CEBE47025571447006A5FAE /* Theme.swift */,
 				8CEBE4C7255732B4006A5FAE /* Views */,
+				8CEBE4C8255732BB006A5FAE /* ViewControllers */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -270,6 +270,14 @@
 				8CEBE491255721DF006A5FAE /* StatusView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8CEBE4C8255732BB006A5FAE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CEBE47F25571A97006A5FAE /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +437,7 @@
 				8CEBE4BD25572D7E006A5FAE /* Optional.swift in Sources */,
 				8CEBE4262556DFC5006A5FAE /* ListViewModel.swift in Sources */,
 				8CEBE4602556EF24006A5FAE /* ListViewDataProtocol.swift in Sources */,
+				8CEBE48025571A97006A5FAE /* ViewController.swift in Sources */,
 				8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */,
 				8CEBE4472556E307006A5FAE /* Decodable.swift in Sources */,
 				8CEBE3D52556BAC7006A5FAE /* NetworkManager.swift in Sources */,
@@ -439,7 +448,6 @@
 				8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
 				8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */,
-				8CE0EF5C25569DD200F5C130 /* ViewController.swift in Sources */,
 				8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */,
 				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
