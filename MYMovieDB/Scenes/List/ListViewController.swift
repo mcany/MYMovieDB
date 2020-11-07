@@ -9,6 +9,18 @@ import UIKit
 
 final class ListViewController: UIViewController {
 
+    private let viewModel: ListViewProtocol
+
+    init(with viewModel: ListViewProtocol) {
+
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     private lazy var helloWorldLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -19,9 +31,11 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
 
         prepareViews()
+        viewModel.fetchMovies()
     }
 
     private func prepareViews() {
+
         title = "My list"
         view.backgroundColor = .white
         view.addSubview(helloWorldLabel)

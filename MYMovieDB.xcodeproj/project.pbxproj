@@ -20,6 +20,7 @@
 		8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE3F12556BDFF006A5FAE /* Request.swift */; };
 		8CEBE4022556C097006A5FAE /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4012556C097006A5FAE /* URLRequest.swift */; };
 		8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4192556DF37006A5FAE /* Response.swift */; };
+		8CEBE4262556DFC5006A5FAE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4252556DFC5006A5FAE /* ListViewModel.swift */; };
 		8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE42B2556E014006A5FAE /* ListViewDataController.swift */; };
 		8CEBE4312556E20E006A5FAE /* MoviePopularListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4302556E20E006A5FAE /* MoviePopularListRequest.swift */; };
 		8CEBE4362556E224006A5FAE /* MoviePopularListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4352556E224006A5FAE /* MoviePopularListResponse.swift */; };
@@ -27,6 +28,7 @@
 		8CEBE4472556E307006A5FAE /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4462556E307006A5FAE /* Decodable.swift */; };
 		8CEBE4522556E84F006A5FAE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4512556E84F006A5FAE /* HTTPMethod.swift */; };
 		8CEBE4602556EF24006A5FAE /* ListViewDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE45F2556EF24006A5FAE /* ListViewDataProtocol.swift */; };
+		8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		8CEBE3F12556BDFF006A5FAE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		8CEBE4012556C097006A5FAE /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		8CEBE4192556DF37006A5FAE /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		8CEBE4252556DFC5006A5FAE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		8CEBE42B2556E014006A5FAE /* ListViewDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataController.swift; sourceTree = "<group>"; };
 		8CEBE4302556E20E006A5FAE /* MoviePopularListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePopularListRequest.swift; sourceTree = "<group>"; };
 		8CEBE4352556E224006A5FAE /* MoviePopularListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePopularListResponse.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		8CEBE4462556E307006A5FAE /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		8CEBE4512556E84F006A5FAE /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		8CEBE45F2556EF24006A5FAE /* ListViewDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewDataProtocol.swift; sourceTree = "<group>"; };
+		8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				8CEBE3C82556B79F006A5FAE /* AppRouter.swift */,
-				8CEBE3C32556B719006A5FAE /* ListViewController.swift */,
 				8CEBE4242556DFB3006A5FAE /* List */,
 			);
 			path = Scenes;
@@ -195,6 +198,9 @@
 		8CEBE4242556DFB3006A5FAE /* List */ = {
 			isa = PBXGroup;
 			children = (
+				8CEBE3C32556B719006A5FAE /* ListViewController.swift */,
+				8CEBE4252556DFC5006A5FAE /* ListViewModel.swift */,
+				8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */,
 				8CEBE43A2556E2AA006A5FAE /* Models */,
 				8CEBE42A2556DFFD006A5FAE /* Network */,
 			);
@@ -373,7 +379,9 @@
 			files = (
 				8CEBE43C2556E2C9006A5FAE /* Movie.swift in Sources */,
 				8CEBE4312556E20E006A5FAE /* MoviePopularListRequest.swift in Sources */,
+				8CEBE4262556DFC5006A5FAE /* ListViewModel.swift in Sources */,
 				8CEBE4602556EF24006A5FAE /* ListViewDataProtocol.swift in Sources */,
+				8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */,
 				8CEBE4472556E307006A5FAE /* Decodable.swift in Sources */,
 				8CEBE3D52556BAC7006A5FAE /* NetworkManager.swift in Sources */,
 				8CEBE4362556E224006A5FAE /* MoviePopularListResponse.swift in Sources */,
