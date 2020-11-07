@@ -31,6 +31,7 @@
 		8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */; };
 		8CEBE47125571447006A5FAE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE47025571447006A5FAE /* Theme.swift */; };
 		8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE475255717ED006A5FAE /* UIColor.swift */; };
+		8CEBE48825571B16006A5FAE /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE48725571B16006A5FAE /* UINavigationBar.swift */; };
 		8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE496255724DB006A5FAE /* UIView+Layout.swift */; };
 		8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */; };
 		8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4AC25572797006A5FAE /* Layout.swift */; };
@@ -84,6 +85,7 @@
 		8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewProtocol.swift; sourceTree = "<group>"; };
 		8CEBE47025571447006A5FAE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8CEBE475255717ED006A5FAE /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		8CEBE48725571B16006A5FAE /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		8CEBE496255724DB006A5FAE /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		8CEBE4AC25572797006A5FAE /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			children = (
 				8CEBE4462556E307006A5FAE /* Decodable.swift */,
 				8CEBE475255717ED006A5FAE /* UIColor.swift */,
+				8CEBE48725571B16006A5FAE /* UINavigationBar.swift */,
 				8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */,
 				8CEBE496255724DB006A5FAE /* UIView+Layout.swift */,
 				8CEBE4012556C097006A5FAE /* URLRequest.swift */,
@@ -407,6 +410,7 @@
 				8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */,
 				8CEBE4472556E307006A5FAE /* Decodable.swift in Sources */,
 				8CEBE3D52556BAC7006A5FAE /* NetworkManager.swift in Sources */,
+				8CEBE48825571B16006A5FAE /* UINavigationBar.swift in Sources */,
 				8CEBE4362556E224006A5FAE /* MoviePopularListResponse.swift in Sources */,
 				8CEBE3CF2556BA69006A5FAE /* Network.swift in Sources */,
 				8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */,
