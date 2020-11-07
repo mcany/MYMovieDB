@@ -5,8 +5,6 @@
 //  Created by Mertcan Yigin on 7.11.2020.
 //
 
-import Foundation
-
 final class ListViewModel: ListViewProtocol {
 
     private let dataController: ListViewDataProtocol
