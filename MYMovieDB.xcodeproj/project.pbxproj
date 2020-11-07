@@ -36,6 +36,7 @@
 		8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE496255724DB006A5FAE /* UIView+Layout.swift */; };
 		8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */; };
 		8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4AC25572797006A5FAE /* Layout.swift */; };
+		8CEBE4BD25572D7E006A5FAE /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4BC25572D7E006A5FAE /* Optional.swift */; };
 		8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */; };
 		8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4D12557347B006A5FAE /* LoadingView.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		8CEBE496255724DB006A5FAE /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
 		8CEBE4AC25572797006A5FAE /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		8CEBE4BC25572D7E006A5FAE /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		8CEBE4D12557347B006A5FAE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				8CEBE4462556E307006A5FAE /* Decodable.swift */,
+				8CEBE4BC25572D7E006A5FAE /* Optional.swift */,
 				8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */,
 				8CEBE475255717ED006A5FAE /* UIColor.swift */,
 				8CEBE48725571B16006A5FAE /* UINavigationBar.swift */,
@@ -423,6 +426,7 @@
 				8CEBE43C2556E2C9006A5FAE /* Movie.swift in Sources */,
 				8CEBE4312556E20E006A5FAE /* MoviePopularListRequest.swift in Sources */,
 				8CEBE492255721DF006A5FAE /* StatusView.swift in Sources */,
+				8CEBE4BD25572D7E006A5FAE /* Optional.swift in Sources */,
 				8CEBE4262556DFC5006A5FAE /* ListViewModel.swift in Sources */,
 				8CEBE4602556EF24006A5FAE /* ListViewDataProtocol.swift in Sources */,
 				8CEBE4652556EF83006A5FAE /* ListViewProtocol.swift in Sources */,
