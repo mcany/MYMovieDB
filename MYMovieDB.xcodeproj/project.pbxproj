@@ -40,6 +40,8 @@
 		8CEBE4BD25572D7E006A5FAE /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4BC25572D7E006A5FAE /* Optional.swift */; };
 		8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */; };
 		8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4D12557347B006A5FAE /* LoadingView.swift */; };
+		8CEBE54625580863006A5FAE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE54525580863006A5FAE /* ImageLoader.swift */; };
+		8CEBE54B2558088C006A5FAE /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE54A2558088C006A5FAE /* ImageRequest.swift */; };
 		8CEBE56625581B17006A5FAE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE56525581B17006A5FAE /* Date.swift */; };
 		8CEBE56E25581C44006A5FAE /* DateFormattingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE56D25581C44006A5FAE /* DateFormattingHelper.swift */; };
 		8CEBE57C2558251E006A5FAE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE57B2558251E006A5FAE /* String.swift */; };
@@ -102,6 +104,8 @@
 		8CEBE4BC25572D7E006A5FAE /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		8CEBE4D12557347B006A5FAE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		8CEBE54525580863006A5FAE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		8CEBE54A2558088C006A5FAE /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		8CEBE56525581B17006A5FAE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8CEBE56D25581C44006A5FAE /* DateFormattingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingHelper.swift; sourceTree = "<group>"; };
 		8CEBE57B2558251E006A5FAE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 		8CEBE3D32556BAA4006A5FAE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8CEBE54A2558088C006A5FAE /* ImageRequest.swift */,
 				8CEBE3D42556BAC7006A5FAE /* NetworkManager.swift */,
 				8CEBE3F12556BDFF006A5FAE /* Request.swift */,
 				8CEBE4192556DF37006A5FAE /* Response.swift */,
@@ -268,9 +273,10 @@
 			isa = PBXGroup;
 			children = (
 				8CEBE56D25581C44006A5FAE /* DateFormattingHelper.swift */,
+				8CEBE54525580863006A5FAE /* ImageLoader.swift */,
 				8CEBE47025571447006A5FAE /* Theme.swift */,
-				8CEBE4C7255732B4006A5FAE /* Views */,
 				8CEBE4C8255732BB006A5FAE /* ViewControllers */,
+				8CEBE4C7255732B4006A5FAE /* Views */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */,
 				8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
+				8CEBE54B2558088C006A5FAE /* ImageRequest.swift in Sources */,
 				8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */,
 				8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */,
 				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
@@ -469,6 +476,7 @@
 				8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */,
 				8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */,
 				8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */,
+				8CEBE54625580863006A5FAE /* ImageLoader.swift in Sources */,
 				8CEBE4522556E84F006A5FAE /* HTTPMethod.swift in Sources */,
 				8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */,
 				8CE0EF5825569DD200F5C130 /* AppDelegate.swift in Sources */,

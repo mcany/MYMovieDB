@@ -13,6 +13,7 @@ final class NetworkManager: NSObject {
 
         static let baseURL = "https://api.themoviedb.org/3/"
         static let apiKey = "9a1fba3cdaf882b8d7ef7bd2a998485d"
+        static let imageURL = "https://image.tmdb.org/t/p/"
     }
 
     private enum ErrorConstant {
@@ -52,6 +53,31 @@ final class NetworkManager: NSObject {
                                  queryParameters: queryParameters,
                                  bodyParameters: request.bodyParameters,
                                  headers: nil)
+
+        return process(request, completion: completion)
+    }
+
+    func send(imageRequest request: ImageRequest,
+              completion: @escaping NetworkCompletion) -> URLSessionTask? {
+
+        guard var url = URL(string: Config.imageURL) else {
+            fatalError("Base url is not valid!")
+        }
+
+        if let urlWithEndpoint = URL(string: request.endpoint, relativeTo: url) {
+            url = urlWithEndpoint
+        }
+
+        let request = URLRequest(with: url,
+                                 method: request.method,
+                                 queryParameters: nil,
+                                 bodyParameters: request.bodyParameters,
+                                 headers: nil)
+
+        return process(request, completion: completion)
+    }
+
+    private func process(_ request: URLRequest, completion: @escaping NetworkCompletion) -> URLSessionTask {
 
         let task = urlSession.dataTask(with: request) { data, response, sessionError in
 
