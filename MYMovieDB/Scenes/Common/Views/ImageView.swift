@@ -5,6 +5,7 @@
 //  Created by Mertcan Yigin on 8.11.2020.
 //
 
+import Foundation
 import UIKit
 
 final class ImageView: UIImageView {
@@ -42,7 +43,7 @@ final class ImageView: UIImageView {
     var imageWidth: CGFloat? {
         didSet {
             guard let imageWidth = imageWidth else { return }
-            imageLoader.imageWidth = Int(imageWidth)
+            imageLoader.imageWidth = Int(round(Double(imageWidth) / 100) * 100)
         }
     }
 
