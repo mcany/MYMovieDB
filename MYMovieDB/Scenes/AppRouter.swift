@@ -16,7 +16,7 @@ final class AppRouter {
         window = UIWindow(frame: UIScreen.main.bounds)
 
         let viewModel = ListViewModel(with: ListViewDataController())
-        let controller = ListViewController(with: viewModel)
+        let controller = ListViewController(with: viewModel, router: ListRouter())
         let navigationController = UINavigationController(rootViewController: controller)
         window.rootViewController = navigationController
 

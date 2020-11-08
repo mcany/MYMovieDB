@@ -55,6 +55,8 @@
 		8CEBE588255832EE006A5FAE /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE587255832EE006A5FAE /* MovieDetailViewController.swift */; };
 		8CEBE58D25583895006A5FAE /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE58C25583895006A5FAE /* MovieDetailViewModel.swift */; };
 		8CEBE592255838FA006A5FAE /* MovieDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE591255838FA006A5FAE /* MovieDetailViewProtocol.swift */; };
+		8CEBE597255839D5006A5FAE /* ListViewRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE596255839D5006A5FAE /* ListViewRouting.swift */; };
+		8CEBE59C25583A0B006A5FAE /* ListViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE59B25583A0B006A5FAE /* ListViewRouter.swift */; };
 		8CEBE5A5255876E4006A5FAE /* MovieDetailDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5A4255876E4006A5FAE /* MovieDetailDataController.swift */; };
 		8CEBE5AD255876F3006A5FAE /* MovieDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5AC255876F3006A5FAE /* MovieDetailRequest.swift */; };
 		8CEBE5B725587A90006A5FAE /* MovieDetailDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5B625587A90006A5FAE /* MovieDetailDataProtocol.swift */; };
@@ -133,6 +135,8 @@
 		8CEBE587255832EE006A5FAE /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		8CEBE58C25583895006A5FAE /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		8CEBE591255838FA006A5FAE /* MovieDetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewProtocol.swift; sourceTree = "<group>"; };
+		8CEBE596255839D5006A5FAE /* ListViewRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewRouting.swift; sourceTree = "<group>"; };
+		8CEBE59B25583A0B006A5FAE /* ListViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewRouter.swift; sourceTree = "<group>"; };
 		8CEBE5A4255876E4006A5FAE /* MovieDetailDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDataController.swift; sourceTree = "<group>"; };
 		8CEBE5AC255876F3006A5FAE /* MovieDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRequest.swift; sourceTree = "<group>"; };
 		8CEBE5B625587A90006A5FAE /* MovieDetailDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDataProtocol.swift; sourceTree = "<group>"; };
@@ -274,6 +278,8 @@
 				8CEBE3C32556B719006A5FAE /* ListViewController.swift */,
 				8CEBE4252556DFC5006A5FAE /* ListViewModel.swift */,
 				8CEBE4642556EF83006A5FAE /* ListViewProtocol.swift */,
+				8CEBE59B25583A0B006A5FAE /* ListViewRouter.swift */,
+				8CEBE596255839D5006A5FAE /* ListViewRouting.swift */,
 				8CEBE48C255720FC006A5FAE /* ListViewState.swift */,
 				8CEBE43A2556E2AA006A5FAE /* Models */,
 				8CEBE42A2556DFFD006A5FAE /* Network */,
@@ -557,6 +563,8 @@
 				8CEBE54625580863006A5FAE /* ImageLoader.swift in Sources */,
 				8CEBE4522556E84F006A5FAE /* HTTPMethod.swift in Sources */,
 				8CEBE58D25583895006A5FAE /* MovieDetailViewModel.swift in Sources */,
+				8CEBE597255839D5006A5FAE /* ListViewRouting.swift in Sources */,
+				8CEBE59C25583A0B006A5FAE /* ListViewRouter.swift in Sources */,
 				8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */,
 				8CE0EF5825569DD200F5C130 /* AppDelegate.swift in Sources */,
 				8CEBE3C42556B719006A5FAE /* ListViewController.swift in Sources */,

@@ -10,6 +10,7 @@ final class ListViewModel: ListViewProtocol {
     // MARK: Properties
 
     private let dataController: ListViewDataProtocol
+
     private let state = ListViewState()
 
     var stateChangeHandler: ListViewStateOnChange? {
@@ -38,6 +39,10 @@ extension ListViewModel {
         }
         return MovieViewData(movie: movie)
     }
+
+    func selectMovie(at index: Int) {
+        state.selectedMovie = state.movies?[safe: index]
+    }
 }
 
 // MARK: Data Functions
@@ -48,7 +53,6 @@ extension ListViewModel {
         state.loading = true
         dataController.fetchMovies(page: 1) { [weak self] (reponse, _) in
             self?.state.loading = false
-            // TODO: Return fetched movies to VC
             self?.state.movies = reponse?.movies
         }
     }

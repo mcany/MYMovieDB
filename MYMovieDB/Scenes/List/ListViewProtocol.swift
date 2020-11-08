@@ -17,6 +17,10 @@ protocol ListViewProtocol {
     /// - Parameter index: Index number of the movie
     func movie(at index: Int) -> MovieViewData?
 
+    /// User selection index
+    /// - Parameter index: Index number of the movie
+    func selectMovie(at index: Int)
+
     /// Fetches movies
     func fetchMovies()
 }

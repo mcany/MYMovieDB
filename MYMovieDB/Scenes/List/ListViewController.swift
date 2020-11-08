@@ -13,6 +13,8 @@ final class ListViewController: ViewController {
 
     private var viewModel: ListViewProtocol
 
+    private let router: ListViewRouting
+
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,9 +28,10 @@ final class ListViewController: ViewController {
 
     // MARK: Lifecycle
 
-    init(with viewModel: ListViewProtocol) {
+    init(with viewModel: ListViewProtocol, router: ListViewRouting) {
 
         self.viewModel = viewModel
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -48,11 +51,11 @@ final class ListViewController: ViewController {
     }
 }
 
-// MARK: Helpers
+// MARK: Private Helpers
 
-extension ListViewController {
+private extension ListViewController {
 
-    private func prepareViews() {
+    func prepareViews() {
 
         // TODO: Add localization
         title = "My list"
@@ -60,6 +63,7 @@ extension ListViewController {
         view.addSubview(tableView)
         view.dock(view: tableView)
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
@@ -83,6 +87,15 @@ extension ListViewController: UITableViewDataSource {
     }
 }
 
+// MARK: UITableViewDelegate
+
+extension ListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.selectMovie(at: indexPath.row)
+    }
+}
+
 // MARK: State Change Handler
 
 private extension ListViewController {
@@ -99,6 +112,11 @@ private extension ListViewController {
             } else {
                 tableView.reloadData()
             }
+        case .selectedMovieID(let movieID):
+            guard let navigationController = navigationController else {
+                return
+            }
+            router.proceedToMovieDetail(current: navigationController, movieID: movieID)
         }
     }
 }

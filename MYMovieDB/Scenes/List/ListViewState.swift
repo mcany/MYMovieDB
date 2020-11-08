@@ -13,6 +13,7 @@ final class ListViewState {
     enum Change {
         case loading(Bool)
         case movies([Movie]?)
+        case selectedMovieID(Int)
     }
 
     /// On change listener function
@@ -29,6 +30,16 @@ final class ListViewState {
     var movies: [Movie]? {
         didSet {
             onChange?(.movies(movies))
+        }
+    }
+
+    /// Movie list of the view
+    var selectedMovie: Movie? {
+        didSet {
+            guard let movie = selectedMovie else {
+                return
+            }
+            onChange?(.selectedMovieID(movie.identifier))
         }
     }
 }
