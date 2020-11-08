@@ -52,6 +52,9 @@
 		8CEBE56625581B17006A5FAE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE56525581B17006A5FAE /* Date.swift */; };
 		8CEBE56E25581C44006A5FAE /* DateFormattingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE56D25581C44006A5FAE /* DateFormattingHelper.swift */; };
 		8CEBE57C2558251E006A5FAE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE57B2558251E006A5FAE /* String.swift */; };
+		8CEBE5A5255876E4006A5FAE /* MovieDetailDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5A4255876E4006A5FAE /* MovieDetailDataController.swift */; };
+		8CEBE5AD255876F3006A5FAE /* MovieDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5AC255876F3006A5FAE /* MovieDetailRequest.swift */; };
+		8CEBE5B725587A90006A5FAE /* MovieDetailDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5B625587A90006A5FAE /* MovieDetailDataProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +126,9 @@
 		8CEBE56525581B17006A5FAE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		8CEBE56D25581C44006A5FAE /* DateFormattingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingHelper.swift; sourceTree = "<group>"; };
 		8CEBE57B2558251E006A5FAE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8CEBE5A4255876E4006A5FAE /* MovieDetailDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDataController.swift; sourceTree = "<group>"; };
+		8CEBE5AC255876F3006A5FAE /* MovieDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRequest.swift; sourceTree = "<group>"; };
+		8CEBE5B625587A90006A5FAE /* MovieDetailDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDataProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,7 @@
 				8CEBE3C82556B79F006A5FAE /* AppRouter.swift */,
 				8CEBE46F2557143A006A5FAE /* Common */,
 				8CEBE4242556DFB3006A5FAE /* List */,
+				8CEBE586255832CE006A5FAE /* Movie Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -325,6 +332,24 @@
 				8CEBE5252557F55F006A5FAE /* ListViewTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8CEBE586255832CE006A5FAE /* Movie Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8CEBE5A3255876CE006A5FAE /* Network */,
+			);
+			path = "Movie Detail";
+			sourceTree = "<group>";
+		};
+		8CEBE5A3255876CE006A5FAE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8CEBE5A4255876E4006A5FAE /* MovieDetailDataController.swift */,
+				8CEBE5B625587A90006A5FAE /* MovieDetailDataProtocol.swift */,
+				8CEBE5AC255876F3006A5FAE /* MovieDetailRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +516,7 @@
 				8CEBE4472556E307006A5FAE /* Decodable.swift in Sources */,
 				8CEBE3D52556BAC7006A5FAE /* NetworkManager.swift in Sources */,
 				8CEBE48825571B16006A5FAE /* UINavigationBar.swift in Sources */,
+				8CEBE5AD255876F3006A5FAE /* MovieDetailRequest.swift in Sources */,
 				8CEBE4362556E224006A5FAE /* MoviePopularListResponse.swift in Sources */,
 				8CEBE3CF2556BA69006A5FAE /* Network.swift in Sources */,
 				8CEBE56E25581C44006A5FAE /* DateFormattingHelper.swift in Sources */,
@@ -503,10 +529,12 @@
 				8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */,
 				8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */,
 				8CEBE5262557F55F006A5FAE /* ListViewTableViewCell.swift in Sources */,
+				8CEBE5B725587A90006A5FAE /* MovieDetailDataProtocol.swift in Sources */,
 				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
 				8CEBE56125581ABF006A5FAE /* MovieViewData.swift in Sources */,
 				8CEBE48D255720FC006A5FAE /* ListViewState.swift in Sources */,
+				8CEBE5A5255876E4006A5FAE /* MovieDetailDataController.swift in Sources */,
 				8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */,
 				8CEBE55325580F88006A5FAE /* Collection.swift in Sources */,
 				8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */,

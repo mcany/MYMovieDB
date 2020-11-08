@@ -32,6 +32,10 @@ final class MovieViewData {
         return movie.backdropPath
     }
 
+    var overview: String? {
+        return movie.overview
+    }
+
     init(movie: Movie) {
         self.movie = movie
         releaseDateDate = movie.releaseDateString?.toDate(using: "yyyy-MM-dd")

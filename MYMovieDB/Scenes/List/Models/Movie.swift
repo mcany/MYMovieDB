@@ -16,6 +16,8 @@ struct Movie: Decodable {
         case genres = "genre_ids"
         case releaseDateString = "release_date"
         case backdropPath = "backdrop_path"
+        case overview
+        case video
     }
 
     /// Identifier
@@ -36,4 +38,7 @@ struct Movie: Decodable {
     /// Backdrop iamge path
     let backdropPath: String?
 
+    let overview: String?
+
+    let video: Bool?
 }
