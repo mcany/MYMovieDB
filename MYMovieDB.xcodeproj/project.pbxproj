@@ -40,6 +40,8 @@
 		8CEBE4BD25572D7E006A5FAE /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4BC25572D7E006A5FAE /* Optional.swift */; };
 		8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */; };
 		8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4D12557347B006A5FAE /* LoadingView.swift */; };
+		8CEBE5262557F55F006A5FAE /* ListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5252557F55F006A5FAE /* ListViewTableViewCell.swift */; };
+		8CEBE52E2557F906006A5FAE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE52D2557F906006A5FAE /* Reusable.swift */; };
 		8CEBE5412558080D006A5FAE /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5402558080D006A5FAE /* ImageView.swift */; };
 		8CEBE54625580863006A5FAE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE54525580863006A5FAE /* ImageLoader.swift */; };
 		8CEBE54B2558088C006A5FAE /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE54A2558088C006A5FAE /* ImageRequest.swift */; };
@@ -105,6 +107,8 @@
 		8CEBE4BC25572D7E006A5FAE /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		8CEBE4D12557347B006A5FAE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		8CEBE5252557F55F006A5FAE /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTableViewCell.swift; sourceTree = "<group>"; };
+		8CEBE52D2557F906006A5FAE /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		8CEBE5402558080D006A5FAE /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		8CEBE54525580863006A5FAE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		8CEBE54A2558088C006A5FAE /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 				8CEBE48C255720FC006A5FAE /* ListViewState.swift */,
 				8CEBE43A2556E2AA006A5FAE /* Models */,
 				8CEBE42A2556DFFD006A5FAE /* Network */,
+				8CEBE5242557F537006A5FAE /* Views */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			children = (
 				8CEBE5402558080D006A5FAE /* ImageView.swift */,
 				8CEBE4D12557347B006A5FAE /* LoadingView.swift */,
+				8CEBE52D2557F906006A5FAE /* Reusable.swift */,
 				8CEBE491255721DF006A5FAE /* StatusView.swift */,
 			);
 			path = Views;
@@ -299,6 +305,14 @@
 				8CEBE47F25571A97006A5FAE /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8CEBE5242557F537006A5FAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8CEBE5252557F55F006A5FAE /* ListViewTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CEBE43C2556E2C9006A5FAE /* Movie.swift in Sources */,
+				8CEBE52E2557F906006A5FAE /* Reusable.swift in Sources */,
 				8CEBE57C2558251E006A5FAE /* String.swift in Sources */,
 				8CEBE4312556E20E006A5FAE /* MoviePopularListRequest.swift in Sources */,
 				8CEBE492255721DF006A5FAE /* StatusView.swift in Sources */,
@@ -474,6 +489,7 @@
 				8CEBE54B2558088C006A5FAE /* ImageRequest.swift in Sources */,
 				8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */,
 				8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */,
+				8CEBE5262557F55F006A5FAE /* ListViewTableViewCell.swift in Sources */,
 				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
 				8CEBE48D255720FC006A5FAE /* ListViewState.swift in Sources */,
