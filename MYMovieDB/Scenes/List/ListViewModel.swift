@@ -17,10 +17,26 @@ final class ListViewModel: ListViewProtocol {
         set { state.onChange = newValue }
     }
 
+    var movieCount: Int {
+        return (state.movies ?? []).count
+    }
+
     // MARK: Lifecycle
 
     init(with dataController: ListViewDataProtocol) {
         self.dataController = dataController
+    }
+}
+
+// MARK: Public Methods
+
+extension ListViewModel {
+
+    func movie(at index: Int) -> MovieViewData? {
+        guard let movie = state.movies?[safe: index] else {
+            return nil
+        }
+        return MovieViewData(movie: movie)
     }
 }
 
@@ -30,10 +46,10 @@ extension ListViewModel {
 
     func fetchMovies() {
         state.loading = true
-        dataController.fetchMovies(page: 1) { [weak self] (response, error) in
+        dataController.fetchMovies(page: 1) { [weak self] (reponse, _) in
             self?.state.loading = false
             // TODO: Return fetched movies to VC
-            self?.state.movies = nil
+            self?.state.movies = reponse?.movies
         }
     }
 }

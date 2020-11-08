@@ -42,9 +42,11 @@
 		8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE4D12557347B006A5FAE /* LoadingView.swift */; };
 		8CEBE5262557F55F006A5FAE /* ListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5252557F55F006A5FAE /* ListViewTableViewCell.swift */; };
 		8CEBE52E2557F906006A5FAE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE52D2557F906006A5FAE /* Reusable.swift */; };
+		8CEBE533255801E3006A5FAE /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE532255801E3006A5FAE /* UITableView.swift */; };
 		8CEBE5412558080D006A5FAE /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5402558080D006A5FAE /* ImageView.swift */; };
 		8CEBE54625580863006A5FAE /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE54525580863006A5FAE /* ImageLoader.swift */; };
 		8CEBE54B2558088C006A5FAE /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE54A2558088C006A5FAE /* ImageRequest.swift */; };
+		8CEBE55325580F88006A5FAE /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE55225580F88006A5FAE /* Collection.swift */; };
 		8CEBE55C25581A08006A5FAE /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE55B25581A08006A5FAE /* Genre.swift */; };
 		8CEBE56125581ABF006A5FAE /* MovieViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE56025581ABF006A5FAE /* MovieViewData.swift */; };
 		8CEBE56625581B17006A5FAE /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE56525581B17006A5FAE /* Date.swift */; };
@@ -111,9 +113,11 @@
 		8CEBE4D12557347B006A5FAE /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		8CEBE5252557F55F006A5FAE /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTableViewCell.swift; sourceTree = "<group>"; };
 		8CEBE52D2557F906006A5FAE /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		8CEBE532255801E3006A5FAE /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		8CEBE5402558080D006A5FAE /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		8CEBE54525580863006A5FAE /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		8CEBE54A2558088C006A5FAE /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		8CEBE55225580F88006A5FAE /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		8CEBE55B25581A08006A5FAE /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		8CEBE56025581ABF006A5FAE /* MovieViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewData.swift; sourceTree = "<group>"; };
 		8CEBE56525581B17006A5FAE /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 		8CEBE4002556C07C006A5FAE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8CEBE55225580F88006A5FAE /* Collection.swift */,
 				8CEBE56525581B17006A5FAE /* Date.swift */,
 				8CEBE4462556E307006A5FAE /* Decodable.swift */,
 				8CEBE4BC25572D7E006A5FAE /* Optional.swift */,
@@ -240,6 +245,7 @@
 				8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */,
 				8CEBE475255717ED006A5FAE /* UIColor.swift */,
 				8CEBE48725571B16006A5FAE /* UINavigationBar.swift */,
+				8CEBE532255801E3006A5FAE /* UITableView.swift */,
 				8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */,
 				8CEBE496255724DB006A5FAE /* UIView+Layout.swift */,
 				8CEBE4012556C097006A5FAE /* URLRequest.swift */,
@@ -492,6 +498,7 @@
 				8CEBE5412558080D006A5FAE /* ImageView.swift in Sources */,
 				8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
+				8CEBE533255801E3006A5FAE /* UITableView.swift in Sources */,
 				8CEBE54B2558088C006A5FAE /* ImageRequest.swift in Sources */,
 				8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */,
 				8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */,
@@ -501,6 +508,7 @@
 				8CEBE56125581ABF006A5FAE /* MovieViewData.swift in Sources */,
 				8CEBE48D255720FC006A5FAE /* ListViewState.swift in Sources */,
 				8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */,
+				8CEBE55325580F88006A5FAE /* Collection.swift in Sources */,
 				8CEBE4D22557347B006A5FAE /* LoadingView.swift in Sources */,
 				8CEBE49F25572544006A5FAE /* UIView+Anchor.swift in Sources */,
 				8CEBE54625580863006A5FAE /* ImageLoader.swift in Sources */,
