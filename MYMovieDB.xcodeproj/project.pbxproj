@@ -242,6 +242,7 @@
 				8CE0EF6525569DD500F5C130 /* Info.plist */,
 				8CE0EF5725569DD200F5C130 /* AppDelegate.swift */,
 				8CE0EF6025569DD500F5C130 /* Assets.xcassets */,
+				8CEBE46F2557143A006A5FAE /* Common */,
 				8CEBE3CD2556BA52006A5FAE /* Constants */,
 				8CEBE4002556C07C006A5FAE /* Extensions */,
 				8CE0EF6225569DD500F5C130 /* LaunchScreen.storyboard */,
@@ -274,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				8CEBE3C82556B79F006A5FAE /* AppRouter.swift */,
-				8CEBE46F2557143A006A5FAE /* Common */,
 				8CEBE4242556DFB3006A5FAE /* List */,
 				8CEBE586255832CE006A5FAE /* Movie Detail */,
 				8CEBE5FB25595E27006A5FAE /* Person Detail View */,
