@@ -9,10 +9,12 @@ import UIKit
 
 protocol ListViewRouting {
 
-    /// Proceeds to movie detail page
+    /// Proceeds to item detail page
     /// - Parameters:
     ///   - current: Current context
-    ///   - movieID: Selected movie id
-    func proceedToMovieDetail(current: UINavigationController, movieID: Int)
-
+    ///   - mediaType: Media type of the selected item
+    ///   - itemID: Selected item id
+    func proceedToItemDetail(current: UINavigationController,
+                             mediaType: MediaType?,
+                             itemID: Int)
 }

@@ -15,6 +15,7 @@ final class ListViewModel: ListViewProtocol {
 
     private let state = ListViewState()
 
+    private var movies: [Movie]?
     private var movieResults: [Result]?
     private var tvResults: [Result]?
     private var personResults: [Result]?
@@ -47,7 +48,7 @@ extension ListViewModel {
 
     func listCount(at section: Int) -> Int {
         if state.viewType == .list {
-            return (state.movies ?? []).count
+            return (movies ?? []).count
         } else {
             switch section {
             case 0:
@@ -64,7 +65,7 @@ extension ListViewModel {
 
     func listItem(at indexPath: IndexPath) -> ListViewData? {
         if state.viewType == .list {
-            guard let movie = state.movies?[safe: indexPath.row] else {
+            guard let movie = movies?[safe: indexPath.row] else {
                 return nil
             }
             return MovieViewData(movie: movie)
@@ -95,8 +96,29 @@ extension ListViewModel {
         }
     }
 
-    func selectMovie(at index: Int) {
-        state.selectedMovie = state.movies?[safe: index]
+    func selectListItem(at indexPath: IndexPath) {
+        if state.viewType == .list {
+            guard let movie = movies?[safe: indexPath.row] else {
+                return
+            }
+            state.selectedItem = MovieViewData(movie: movie)
+        } else {
+            var results: [Result]?
+            switch indexPath.section {
+            case 0:
+                results = movieResults
+            case 1:
+                results = tvResults
+            case 2:
+                results = personResults
+            default:
+                break
+            }
+            guard let result = results?[safe: indexPath.row] else {
+                return
+            }
+            state.selectedItem = ResultViewData(result: result)
+        }
     }
 
     func search(with keyword: String?) {
@@ -140,7 +162,16 @@ private extension ListViewModel {
         personResults = results.filter { result in
             result.mediaType == .person
         }
-        state.results = results
+        state.listItems = results.compactMap { result in
+            ResultViewData(result: result)
+        }
+    }
+
+    func update(_ movies: [Movie]?) {
+        self.movies = movies
+        state.listItems = movies?.compactMap { movie in
+            MovieViewData(movie: movie)
+        }
     }
 }
 
@@ -150,15 +181,15 @@ extension ListViewModel {
 
     func fetchMovies() {
         state.loading = true
-        dataController.fetchMovies(page: 1) { [weak self] (reponse, _) in
+        dataController.fetchMovies(page: 1) { [weak self] (response, _) in
             self?.state.loading = false
-            self?.state.movies = reponse?.movies
+            self?.update(response?.movies)
         }
     }
 
     private func fetchSearch(with keyword: String) {
-        dataController.search(keyword) { [weak self] (reponse, _) in
-            self?.update(reponse?.results)
+        dataController.search(keyword) { [weak self] (response, _) in
+            self?.update(response?.results)
         }
     }
 }

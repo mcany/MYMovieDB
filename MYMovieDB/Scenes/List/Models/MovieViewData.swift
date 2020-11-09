@@ -16,6 +16,10 @@ final class MovieViewData: ListViewData {
 
     private let releaseDateDate: Date?
 
+    var identifier: Int {
+        return movie.identifier
+    }
+
     var name: String? {
         return movie.title
     }

@@ -12,9 +12,8 @@ final class ListViewState {
     /// State changes
     enum Change {
         case loading(Bool)
-        case movies([Movie]?)
-        case selectedMovieID(Int)
-        case results([Result])
+        case listItems([ListViewData]?)
+        case selectedItemID(MediaType?, Int)
         case viewType
     }
 
@@ -33,35 +32,28 @@ final class ListViewState {
         }
     }
 
-    /// Movie list of the view
-    var movies: [Movie]? {
+    /// List items of the view
+    var listItems: [ListViewData]? {
         didSet {
-            onChange?(.movies(movies))
+            onChange?(.listItems(listItems))
         }
     }
 
-    /// Movie list of the view
-    var selectedMovie: Movie? {
+    /// Selected list item of the view
+    var selectedItem: ListViewData? {
         didSet {
-            guard let movie = selectedMovie else {
+            guard let selectedItem = selectedItem else {
                 return
             }
-            onChange?(.selectedMovieID(movie.identifier))
+            onChange?(.selectedItemID(selectedItem.mediaType,
+                                      selectedItem.identifier))
         }
     }
 
+    /// Current view type
     var viewType: ViewType = .list {
         didSet {
             onChange?(.viewType)
-        }
-    }
-
-    var results: [Result]? {
-        didSet {
-            guard let results = results else {
-                return
-            }
-            onChange?(.results(results))
         }
     }
 }

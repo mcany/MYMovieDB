@@ -91,10 +91,10 @@ private extension ListViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
+        // TODO: Add localization
         searchBar.placeholder = "Search"
         searchBar.showsCancelButton = true
         searchBar.delegate = self
-        //        navigationItem.titleView = searchBar
     }
 }
 
@@ -146,7 +146,7 @@ extension ListViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.selectMovie(at: indexPath.row)
+        viewModel.selectListItem(at: indexPath)
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
@@ -159,23 +159,21 @@ private extension ListViewController {
         switch change {
         case .loading(let isLoading):
             isLoading ? showLoadingView() : removeLoadingView()
-        case .movies(let movies):
-            if movies.isNilOrEmpty {
+        case .listItems(let listItems):
+            if listItems.isNilOrEmpty {
                 // TODO: Add localization
                 showStatusView(iconName: "info",
                                message: "Movie list is empty or cannot be loaded!")
             } else {
                 tableView.reloadData()
-                tableView.layoutIfNeeded()
-                tableView.contentOffset = .zero
             }
-        case .selectedMovieID(let movieID):
+        case .selectedItemID(let mediaType, let itemID):
             guard let navigationController = navigationController else {
                 return
             }
-            router.proceedToMovieDetail(current: navigationController, movieID: movieID)
-        case .results:
-            tableView.reloadData()
+            router.proceedToItemDetail(current: navigationController,
+                                       mediaType: mediaType,
+                                       itemID: itemID)
         case .viewType:
             tableView.reloadData()
         }

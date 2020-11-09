@@ -7,6 +7,9 @@
 
 protocol ListViewData {
 
+    /// Identifier
+    var identifier: Int { get }
+
     /// Name
     var name: String? { get }
 

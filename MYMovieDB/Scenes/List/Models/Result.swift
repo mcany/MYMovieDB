@@ -26,7 +26,7 @@ struct Result: Codable {
 
     let mediaType: MediaType?
     let name: String?
-    let id: Int?
+    let id: Int
     let posterPath: String?
     let title: String?
     let profilePath: String?

@@ -12,6 +12,10 @@ final class ResultViewData: ListViewData {
 
     private let result: Result
 
+    var identifier: Int {
+        return result.id
+    }
+
     var name: String? {
         if let name = result.name {
             return name

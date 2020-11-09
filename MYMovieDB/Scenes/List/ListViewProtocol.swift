@@ -28,8 +28,8 @@ protocol ListViewProtocol {
     func segmentTitle(at index: Int) -> String?
 
     /// User selection index
-    /// - Parameter index: Index number of the movie
-    func selectMovie(at index: Int)
+    /// - Parameter indexPath: Index number of the selected item
+    func selectListItem(at indexPath: IndexPath)
 
     /// Begins search with given keyword
     /// - Parameter keyword: Search keyword
