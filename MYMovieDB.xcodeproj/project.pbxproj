@@ -78,6 +78,9 @@
 		8CEBE63B25596550006A5FAE /* PersonDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE63A25596550006A5FAE /* PersonDetailViewProtocol.swift */; };
 		8CEBE6462559751F006A5FAE /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE6452559751F006A5FAE /* UISearchBar.swift */; };
 		8CEBE64E255976CE006A5FAE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE64D255976CE006A5FAE /* UIView.swift */; };
+		8CEBE65325597B67006A5FAE /* SearchMultiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE65225597B67006A5FAE /* SearchMultiRequest.swift */; };
+		8CEBE65825597BCF006A5FAE /* SearchMultiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE65725597BCF006A5FAE /* SearchMultiResponse.swift */; };
+		8CEBE65D25597C3F006A5FAE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE65C25597C3F006A5FAE /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +178,9 @@
 		8CEBE63A25596550006A5FAE /* PersonDetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewProtocol.swift; sourceTree = "<group>"; };
 		8CEBE6452559751F006A5FAE /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		8CEBE64D255976CE006A5FAE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8CEBE65225597B67006A5FAE /* SearchMultiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMultiRequest.swift; sourceTree = "<group>"; };
+		8CEBE65725597BCF006A5FAE /* SearchMultiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMultiResponse.swift; sourceTree = "<group>"; };
+		8CEBE65C25597C3F006A5FAE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +339,8 @@
 				8CEBE45F2556EF24006A5FAE /* ListViewDataProtocol.swift */,
 				8CEBE4302556E20E006A5FAE /* MoviePopularListRequest.swift */,
 				8CEBE4352556E224006A5FAE /* MoviePopularListResponse.swift */,
+				8CEBE65225597B67006A5FAE /* SearchMultiRequest.swift */,
+				8CEBE65725597BCF006A5FAE /* SearchMultiResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -343,6 +351,7 @@
 				8CEBE55B25581A08006A5FAE /* Genre.swift */,
 				8CEBE43B2556E2C9006A5FAE /* Movie.swift */,
 				8CEBE56025581ABF006A5FAE /* MovieViewData.swift */,
+				8CEBE65C25597C3F006A5FAE /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -615,6 +624,7 @@
 				8CEBE592255838FA006A5FAE /* MovieDetailViewProtocol.swift in Sources */,
 				8CEBE43C2556E2C9006A5FAE /* Movie.swift in Sources */,
 				8CEBE5CF2558A28C006A5FAE /* MovieCreditsResponse.swift in Sources */,
+				8CEBE65825597BCF006A5FAE /* SearchMultiResponse.swift in Sources */,
 				8CEBE52E2557F906006A5FAE /* Reusable.swift in Sources */,
 				8CEBE57C2558251E006A5FAE /* String.swift in Sources */,
 				8CEBE61325595EFE006A5FAE /* Person.swift in Sources */,
@@ -653,9 +663,11 @@
 				8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */,
 				8CEBE3F22556BDFF006A5FAE /* Request.swift in Sources */,
 				8CEBE5262557F55F006A5FAE /* ListViewTableViewCell.swift in Sources */,
+				8CEBE65325597B67006A5FAE /* SearchMultiRequest.swift in Sources */,
 				8CEBE5B725587A90006A5FAE /* MovieDetailDataProtocol.swift in Sources */,
 				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
+				8CEBE65D25597C3F006A5FAE /* Result.swift in Sources */,
 				8CEBE56125581ABF006A5FAE /* MovieViewData.swift in Sources */,
 				8CEBE48D255720FC006A5FAE /* ListViewState.swift in Sources */,
 				8CEBE5FD25595E4F006A5FAE /* MovieDetailRouter.swift in Sources */,

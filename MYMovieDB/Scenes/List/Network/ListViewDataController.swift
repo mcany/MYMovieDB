@@ -19,4 +19,12 @@ final class ListViewDataController: ListViewDataProtocol {
             completion(response, result.error)
         }
     }
+
+    func search(_ query: String, completion: @escaping SearchMultiCompletion) {
+        let request = SearchMultiRequest(query: query)
+        NetworkManager.shared.send(request: request) { result in
+            let response = SearchMultiResponse.model(withJSONData: result.data)
+            completion(response, result.error)
+        }
+    }
 }
