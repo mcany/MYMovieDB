@@ -61,6 +61,9 @@
 		8CEBE5AD255876F3006A5FAE /* MovieDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5AC255876F3006A5FAE /* MovieDetailRequest.swift */; };
 		8CEBE5B725587A90006A5FAE /* MovieDetailDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5B625587A90006A5FAE /* MovieDetailDataProtocol.swift */; };
 		8CEBE5BF25587BE6006A5FAE /* MovieDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5BE25587BE6006A5FAE /* MovieDetailViewState.swift */; };
+		8CEBE5CA2558A243006A5FAE /* MovieCreditsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5C92558A243006A5FAE /* MovieCreditsRequest.swift */; };
+		8CEBE5CF2558A28C006A5FAE /* MovieCreditsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5CE2558A28C006A5FAE /* MovieCreditsResponse.swift */; };
+		8CEBE5D52558A2A1006A5FAE /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5D42558A2A1006A5FAE /* Cast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +144,9 @@
 		8CEBE5AC255876F3006A5FAE /* MovieDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRequest.swift; sourceTree = "<group>"; };
 		8CEBE5B625587A90006A5FAE /* MovieDetailDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailDataProtocol.swift; sourceTree = "<group>"; };
 		8CEBE5BE25587BE6006A5FAE /* MovieDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewState.swift; sourceTree = "<group>"; };
+		8CEBE5C92558A243006A5FAE /* MovieCreditsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsRequest.swift; sourceTree = "<group>"; };
+		8CEBE5CE2558A28C006A5FAE /* MovieCreditsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsResponse.swift; sourceTree = "<group>"; };
+		8CEBE5D42558A2A1006A5FAE /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,11 +369,21 @@
 		8CEBE5A3255876CE006A5FAE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				8CEBE5C92558A243006A5FAE /* MovieCreditsRequest.swift */,
+				8CEBE5CE2558A28C006A5FAE /* MovieCreditsResponse.swift */,
 				8CEBE5A4255876E4006A5FAE /* MovieDetailDataController.swift */,
 				8CEBE5B625587A90006A5FAE /* MovieDetailDataProtocol.swift */,
 				8CEBE5AC255876F3006A5FAE /* MovieDetailRequest.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8CEBE5D32558A293006A5FAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CEBE5D42558A2A1006A5FAE /* Cast.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,6 +539,7 @@
 			files = (
 				8CEBE592255838FA006A5FAE /* MovieDetailViewProtocol.swift in Sources */,
 				8CEBE43C2556E2C9006A5FAE /* Movie.swift in Sources */,
+				8CEBE5CF2558A28C006A5FAE /* MovieCreditsResponse.swift in Sources */,
 				8CEBE52E2557F906006A5FAE /* Reusable.swift in Sources */,
 				8CEBE57C2558251E006A5FAE /* String.swift in Sources */,
 				8CEBE4312556E20E006A5FAE /* MoviePopularListRequest.swift in Sources */,
@@ -542,6 +559,7 @@
 				8CEBE3CF2556BA69006A5FAE /* Network.swift in Sources */,
 				8CEBE56E25581C44006A5FAE /* DateFormattingHelper.swift in Sources */,
 				8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */,
+				8CEBE5D52558A2A1006A5FAE /* Cast.swift in Sources */,
 				8CEBE5412558080D006A5FAE /* ImageView.swift in Sources */,
 				8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
@@ -564,6 +582,7 @@
 				8CEBE4522556E84F006A5FAE /* HTTPMethod.swift in Sources */,
 				8CEBE58D25583895006A5FAE /* MovieDetailViewModel.swift in Sources */,
 				8CEBE597255839D5006A5FAE /* ListViewRouting.swift in Sources */,
+				8CEBE5CA2558A243006A5FAE /* MovieCreditsRequest.swift in Sources */,
 				8CEBE59C25583A0B006A5FAE /* ListViewRouter.swift in Sources */,
 				8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */,
 				8CE0EF5825569DD200F5C130 /* AppDelegate.swift in Sources */,

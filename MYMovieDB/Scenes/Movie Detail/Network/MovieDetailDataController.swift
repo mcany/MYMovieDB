@@ -15,4 +15,13 @@ final class MovieDetailDataController: MovieDetailDataProtocol {
             completion(response, result.error)
         }
     }
+
+    func fetchMovieCredits(movieID: Int, completion: @escaping FetchMovieCreditCompletion) {
+
+        let request = MovieCreditsRequest(movieID: movieID)
+        NetworkManager.shared.send(request: request) { result in
+            let response = MovieCreditsResponse.model(withJSONData: result.data)
+            completion(response, result.error)
+        }
+    }
 }
