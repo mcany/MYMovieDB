@@ -176,6 +176,8 @@ private extension ListViewController {
             router.proceedToMovieDetail(current: navigationController, movieID: movieID)
         case .results:
             tableView.reloadData()
+        case .viewType:
+            tableView.reloadData()
         }
     }
 }

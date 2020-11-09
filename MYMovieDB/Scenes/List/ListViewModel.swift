@@ -157,7 +157,6 @@ extension ListViewModel {
 
     private func fetchSearch(with keyword: String) {
         dataController.search(keyword) { [weak self] (reponse, _) in
-            self?.state.viewType = .search
             self?.state.results = reponse?.results
             self?.update(reponse?.results)
         }

@@ -15,6 +15,7 @@ final class ListViewState {
         case movies([Movie]?)
         case selectedMovieID(Int)
         case results([Result])
+        case viewType
     }
 
     enum ViewType {
@@ -51,10 +52,7 @@ final class ListViewState {
 
     var viewType: ViewType = .list {
         didSet {
-            if viewType == .list {
-                onChange?(.movies(movies))
-
-            }
+            onChange?(.viewType)
         }
     }
 
