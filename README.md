@@ -61,3 +61,19 @@
 ## Testing
 
 - Example of unit tests is added by using the power of the architecture.
+
+## Missing Features - Improvements
+
+- UI Tests
+
+- Pagination in the list view
+
+- Error view and retry mechanism
+
+- Localization
+
+- Hide empty labels in detail views
+
+- Videos support
+
+- VC creation factory
