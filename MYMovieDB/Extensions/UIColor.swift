@@ -58,6 +58,22 @@ extension UIColor {
                 alpha: 1.0)
     }
 
+    class var steelGray: UIColor {
+
+        UIColor(red: 24.0 / 255.0,
+                green: 24.0 / 255.0,
+                blue: 33.0 / 255.0,
+                alpha: 1.0)
+    }
+
+    class var stone30: UIColor {
+
+        UIColor(red: 76.0 / 255.0,
+                green: 85.0 / 255.0,
+                blue: 108.0 / 255.0,
+                alpha: 0.3)
+    }
+
     class var stone100: UIColor {
 
         UIColor(red: 76.0 / 255.0,

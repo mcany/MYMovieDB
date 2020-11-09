@@ -76,6 +76,8 @@
 		8CEBE62E255960B2006A5FAE /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE62D255960B2006A5FAE /* PersonDetailViewModel.swift */; };
 		8CEBE633255960E2006A5FAE /* PersonDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE632255960E2006A5FAE /* PersonDetailViewState.swift */; };
 		8CEBE63B25596550006A5FAE /* PersonDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE63A25596550006A5FAE /* PersonDetailViewProtocol.swift */; };
+		8CEBE6462559751F006A5FAE /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE6452559751F006A5FAE /* UISearchBar.swift */; };
+		8CEBE64E255976CE006A5FAE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE64D255976CE006A5FAE /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +173,8 @@
 		8CEBE62D255960B2006A5FAE /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
 		8CEBE632255960E2006A5FAE /* PersonDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewState.swift; sourceTree = "<group>"; };
 		8CEBE63A25596550006A5FAE /* PersonDetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewProtocol.swift; sourceTree = "<group>"; };
+		8CEBE6452559751F006A5FAE /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		8CEBE64D255976CE006A5FAE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,7 +300,9 @@
 				8CEBE5EE2559396A006A5FAE /* UICollectionView.swift */,
 				8CEBE475255717ED006A5FAE /* UIColor.swift */,
 				8CEBE48725571B16006A5FAE /* UINavigationBar.swift */,
+				8CEBE6452559751F006A5FAE /* UISearchBar.swift */,
 				8CEBE532255801E3006A5FAE /* UITableView.swift */,
+				8CEBE64D255976CE006A5FAE /* UIView.swift */,
 				8CEBE49E25572544006A5FAE /* UIView+Anchor.swift */,
 				8CEBE496255724DB006A5FAE /* UIView+Layout.swift */,
 				8CEBE4012556C097006A5FAE /* URLRequest.swift */,
@@ -623,6 +629,7 @@
 				8CEBE4472556E307006A5FAE /* Decodable.swift in Sources */,
 				8CEBE3D52556BAC7006A5FAE /* NetworkManager.swift in Sources */,
 				8CEBE48825571B16006A5FAE /* UINavigationBar.swift in Sources */,
+				8CEBE6462559751F006A5FAE /* UISearchBar.swift in Sources */,
 				8CEBE5AD255876F3006A5FAE /* MovieDetailRequest.swift in Sources */,
 				8CEBE5BF25587BE6006A5FAE /* MovieDetailViewState.swift in Sources */,
 				8CEBE4362556E224006A5FAE /* MoviePopularListResponse.swift in Sources */,
@@ -631,6 +638,7 @@
 				8CEBE62E255960B2006A5FAE /* PersonDetailViewModel.swift in Sources */,
 				8CEBE56E25581C44006A5FAE /* DateFormattingHelper.swift in Sources */,
 				8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */,
+				8CEBE64E255976CE006A5FAE /* UIView.swift in Sources */,
 				8CEBE5E7255923D1006A5FAE /* MovieDetailCollectionViewCell.swift in Sources */,
 				8CEBE5D52558A2A1006A5FAE /* Cast.swift in Sources */,
 				8CEBE62425595FBB006A5FAE /* PersonDetailDataController.swift in Sources */,

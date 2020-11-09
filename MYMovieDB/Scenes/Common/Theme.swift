@@ -19,6 +19,14 @@ enum Theme {
 
         static let label: UIColor = .white100
     }
+
+    enum SearchBar {
+
+        static let background = colorForUIStyle(dark: .steelGray, any: .white100)
+        static let label = colorForUIStyle(dark: .white100, any: .stone100)
+        static let placeolder: UIColor = .stone30
+
+    }
 }
 
 extension Theme {
