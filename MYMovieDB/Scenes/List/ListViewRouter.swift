@@ -10,8 +10,11 @@ import UIKit
 final class ListRouter: ListViewRouting {
 
     func proceedToMovieDetail(current: UINavigationController, movieID: Int) {
-        let viewModel = MovieDetailViewModel(with: movieID)
-        let controller = MovieDetailViewController(with: viewModel)
+        let dataController = MovieDetailDataController()
+        let viewModel = MovieDetailViewModel(with: movieID, dataController: dataController)
+        let router = MovieDetailRouter()
+        let controller = MovieDetailViewController(with: viewModel,
+                                                   router: router)
 
         current.pushViewController(controller, animated: true)
     }

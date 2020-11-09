@@ -197,6 +197,7 @@ final class MovieDetailViewController: ViewController {
 
     private var viewModel: MovieDetailViewProtocol
 
+    private var router: MovieDetailRouting
 
     // MARK: Resizing Cell
 
@@ -210,9 +211,10 @@ final class MovieDetailViewController: ViewController {
 
     // MARK: Lifecycle
 
-    init(with viewModel: MovieDetailViewProtocol) {
+    init(with viewModel: MovieDetailViewProtocol, router: MovieDetailRouting) {
 
         self.viewModel = viewModel
+        self.router = router
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -251,8 +253,10 @@ private extension MovieDetailViewController {
         case .casts:
             castCollectionView.reloadData()
         case .selectedCast(let castID):
-            // TODO: route to person detail vc
-            break
+            guard let navigationController = navigationController else {
+                return
+            }
+            router.proceedToPersonDetail(current: navigationController, personID: castID)
         }
     }
 }

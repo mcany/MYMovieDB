@@ -66,6 +66,8 @@
 		8CEBE5D52558A2A1006A5FAE /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5D42558A2A1006A5FAE /* Cast.swift */; };
 		8CEBE5E7255923D1006A5FAE /* MovieDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5E6255923D1006A5FAE /* MovieDetailCollectionViewCell.swift */; };
 		8CEBE5EF2559396A006A5FAE /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5EE2559396A006A5FAE /* UICollectionView.swift */; };
+		8CEBE5FD25595E4F006A5FAE /* MovieDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5FC25595E4F006A5FAE /* MovieDetailRouter.swift */; };
+		8CEBE60525595E5F006A5FAE /* MovieDetailRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE60425595E5F006A5FAE /* MovieDetailRouting.swift */; };
 		8CEBE60A25595E73006A5FAE /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE60925595E73006A5FAE /* PersonDetailViewController.swift */; };
 		8CEBE61325595EFE006A5FAE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE61225595EFE006A5FAE /* Person.swift */; };
 		8CEBE61C25595F6C006A5FAE /* PersonDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE61B25595F6C006A5FAE /* PersonDetailRequest.swift */; };
@@ -159,6 +161,8 @@
 		8CEBE5D42558A2A1006A5FAE /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		8CEBE5E6255923D1006A5FAE /* MovieDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CEBE5EE2559396A006A5FAE /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		8CEBE5FC25595E4F006A5FAE /* MovieDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouter.swift; sourceTree = "<group>"; };
+		8CEBE60425595E5F006A5FAE /* MovieDetailRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailRouting.swift; sourceTree = "<group>"; };
 		8CEBE60925595E73006A5FAE /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		8CEBE61225595EFE006A5FAE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		8CEBE61B25595F6C006A5FAE /* PersonDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailRequest.swift; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 		8CEBE586255832CE006A5FAE /* Movie Detail */ = {
 			isa = PBXGroup;
 			children = (
+				8CEBE5FC25595E4F006A5FAE /* MovieDetailRouter.swift */,
+				8CEBE60425595E5F006A5FAE /* MovieDetailRouting.swift */,
 				8CEBE587255832EE006A5FAE /* MovieDetailViewController.swift */,
 				8CEBE58C25583895006A5FAE /* MovieDetailViewModel.swift */,
 				8CEBE591255838FA006A5FAE /* MovieDetailViewProtocol.swift */,
@@ -633,6 +639,7 @@
 				8CEBE5412558080D006A5FAE /* ImageView.swift in Sources */,
 				8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
+				8CEBE60525595E5F006A5FAE /* MovieDetailRouting.swift in Sources */,
 				8CEBE533255801E3006A5FAE /* UITableView.swift in Sources */,
 				8CEBE54B2558088C006A5FAE /* ImageRequest.swift in Sources */,
 				8CEBE42C2556E014006A5FAE /* ListViewDataController.swift in Sources */,
@@ -643,6 +650,7 @@
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
 				8CEBE56125581ABF006A5FAE /* MovieViewData.swift in Sources */,
 				8CEBE48D255720FC006A5FAE /* ListViewState.swift in Sources */,
+				8CEBE5FD25595E4F006A5FAE /* MovieDetailRouter.swift in Sources */,
 				8CEBE5A5255876E4006A5FAE /* MovieDetailDataController.swift in Sources */,
 				8CEBE497255724DB006A5FAE /* UIView+Layout.swift in Sources */,
 				8CEBE55325580F88006A5FAE /* Collection.swift in Sources */,
