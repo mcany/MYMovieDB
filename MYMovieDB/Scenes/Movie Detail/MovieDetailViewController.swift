@@ -18,12 +18,23 @@ final class MovieDetailViewController: ViewController {
                                           right: -Layout.margin)
 
         enum Poster {
+
             static let size = CGSize(width: 100, height: 150)
             static let cornerRadius: CGFloat = 6
             static let padding = UIEdgeInsets(top: inset,
                                               left: inset,
                                               bottom: -inset,
                                               right: -inset)
+        }
+
+        enum CollectionView {
+
+            static let estimatedHeight: CGFloat = 100
+            static let minimumLineSpacing: CGFloat = 2 * Layout.margin
+            static let insets = UIEdgeInsets(top: 0,
+                                             left: Layout.margin,
+                                             bottom: 0,
+                                             right: Layout.margin)
         }
     }
 
@@ -149,7 +160,53 @@ final class MovieDetailViewController: ViewController {
         return label
     }()
 
+    private let videoStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.alignment = .fill
+        stackView.axis = .vertical
+        stackView.distribution = .equalSpacing
+        stackView.spacing = Layout.margin
+        return stackView
+    }()
+
+    private let videoTitleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.textAlignment = .natural
+        label.textColor = Theme.label
+        // TODO: Add localization
+        label.text = "Video"
+        return label
+    }()
+
+    private var castCollectionViewHeightConstraint: NSLayoutConstraint!
+
+    private let castCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.backgroundColor = .clear
+        collectionView.isPagingEnabled = true
+        return collectionView
+    }()
+
     private var viewModel: MovieDetailViewProtocol
+
+
+    // MARK: Resizing Cell
+
+    private var collectionSize: CGSize = .zero
+
+    private let collectionSizingCell: MovieDetailCollectionViewCell = {
+        let sizingCell = MovieDetailCollectionViewCell()
+        sizingCell.translatesAutoresizingMaskIntoConstraints = false
+        return sizingCell
+    }()
 
     // MARK: Lifecycle
 
@@ -186,10 +243,75 @@ private extension MovieDetailViewController {
             isLoading ? showLoadingView() : removeLoadingView()
         case .movie(let movie):
             backdropImageView.imagePath = movie.backdropPath
-            posterImageView.imagePath = movie.posterPath
-            titleLabel.text = movie.title
+            posterImageView.imagePath = movie.imagePath
+            titleLabel.text = movie.name
+            ratingValueLabel.text = movie.rating
             summaryTitleLabel.text = movie.overview
+            videoStackView.isHidden = !movie.hasVideo
+        case .casts:
+            castCollectionView.reloadData()
+        case .selectedCast(let castID):
+            // TODO: route to person detail vc
+            break
         }
+    }
+}
+
+// MARK: UICollectionViewDataSource
+
+extension MovieDetailViewController: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.castCount
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: MovieDetailCollectionViewCell = collectionView.my_dequeueReusableCell(forIndexPath: indexPath)
+        guard let cast = viewModel.cast(at: indexPath.row) else {
+            return UICollectionViewCell()
+        }
+        cell.configure(with: cast)
+        return cell
+    }
+}
+
+// MARK: UICollectionViewDelegateFlowLayout
+
+extension MovieDetailViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        if collectionSize == .zero {
+            calculateCollectionCellSize()
+        }
+        castCollectionViewHeightConstraint.constant = collectionSize.height
+        collectionView.frame.size.height = collectionSize.height
+        return collectionSize
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        return Constant.CollectionView.insets
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+
+        return Constant.CollectionView.minimumLineSpacing
+    }
+}
+
+// MARK: UICollectionViewDelegate
+
+extension MovieDetailViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        viewModel.selectCast(at: indexPath.row)
     }
 }
 
@@ -197,10 +319,36 @@ private extension MovieDetailViewController {
 
 private extension MovieDetailViewController {
 
+    func calculateCollectionCellSize() {
+        viewModel.casts.enumerated().forEach { index, _ in
+            var size: CGSize = .zero
+            var fittingSize = UIView.layoutFittingCompressedSize
+            fittingSize.width = castCollectionView.bounds.size.width - (2 * Layout.margin)
+
+            let cell = MovieDetailCollectionViewCell()
+            guard let cast = viewModel.cast(at: index) else {
+                return
+            }
+            cell.configure(with: cast)
+            cell.layoutIfNeeded()
+            size = cell.systemLayoutSizeFitting(fittingSize,
+                                                withHorizontalFittingPriority: .required,
+                                                verticalFittingPriority: .defaultLow)
+            if collectionSize.height > size.height {
+                size.height = collectionSize.height
+            }
+            collectionSize = size
+        }
+    }
+
     func prepareViews() {
 
         // TODO: Add localization
         title = "Movie Detail"
+
+        castCollectionView.dataSource = self
+        castCollectionView.delegate = self
+        castCollectionView.my_register(MovieDetailCollectionViewCell.self)
     }
 
     func configureViews() {
@@ -248,9 +396,7 @@ private extension MovieDetailViewController {
             detailStackView.my_leadingAnchor.constraint(equalTo: contentView.my_leadingAnchor,
                                                         constant: Layout.margin),
             detailStackView.my_topAnchor.constraint(equalTo: posterHolderView.my_bottomAnchor,
-                                                    constant: Constant.inset),
-            detailStackView.my_bottomAnchor.constraint(equalTo: contentView.my_bottomAnchor,
-                                                       constant: -Layout.margin)
+                                                    constant: Constant.inset)
         ])
 
         detailStackView.addArrangedSubview(ratingTitleLabel)
@@ -258,6 +404,7 @@ private extension MovieDetailViewController {
         detailStackView.addArrangedSubview(summaryTitleLabel)
         detailStackView.addArrangedSubview(summaryValueLabel)
         detailStackView.addArrangedSubview(castTitleLabel)
+        detailStackView.addArrangedSubview(videoStackView)
 
         constraints.append(contentsOf: [
             detailStackView.my_leadingAnchor.constraint(equalTo: ratingTitleLabel.my_leadingAnchor,
@@ -279,7 +426,34 @@ private extension MovieDetailViewController {
             detailStackView.my_leadingAnchor.constraint(equalTo: castTitleLabel.my_leadingAnchor,
                                                         constant: Layout.margin),
             detailStackView.my_trailingAnchor.constraint(equalTo: castTitleLabel.my_trailingAnchor,
+                                                         constant: -Layout.margin),
+            detailStackView.my_leadingAnchor.constraint(equalTo: videoStackView.my_leadingAnchor,
+                                                        constant: Layout.margin),
+            detailStackView.my_trailingAnchor.constraint(equalTo: videoStackView.my_trailingAnchor,
                                                          constant: -Layout.margin)
+        ])
+
+        videoStackView.addArrangedSubview(videoTitleLabel)
+        constraints.append(contentsOf: [
+            videoStackView.my_leadingAnchor.constraint(equalTo: videoTitleLabel.my_leadingAnchor,
+                                                       constant: Layout.margin),
+            videoStackView.my_trailingAnchor.constraint(equalTo: videoTitleLabel.my_trailingAnchor,
+                                                        constant: -Layout.margin)
+        ])
+
+        contentView.addSubview(castCollectionView)
+        castCollectionViewHeightConstraint = castCollectionView.heightAnchor.constraint(
+            equalToConstant: Constant.CollectionView.estimatedHeight)
+        constraints.append(contentsOf: [
+            castCollectionViewHeightConstraint,
+            contentView.my_trailingAnchor.constraint(equalTo: castCollectionView.my_trailingAnchor,
+                                                     constant: Layout.margin),
+            castCollectionView.my_leadingAnchor.constraint(equalTo: contentView.my_leadingAnchor,
+                                                           constant: Layout.margin),
+            castCollectionView.my_bottomAnchor.constraint(equalTo: contentView.my_bottomAnchor,
+                                                          constant: -Layout.margin),
+            castCollectionView.my_topAnchor.constraint(equalTo: detailStackView.my_bottomAnchor,
+                                                       constant: Layout.margin)
         ])
 
         NSLayoutConstraint.activate(constraints)

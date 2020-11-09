@@ -13,6 +13,8 @@ final class MovieDetailViewState {
     enum Change {
         case loading(Bool)
         case movie(MovieViewData)
+        case casts([Cast]?)
+        case selectedCast(Int)
     }
 
     /// On change listener function
@@ -32,6 +34,23 @@ final class MovieDetailViewState {
                 return
             }
             onChange?(.movie(movie))
+        }
+    }
+
+    /// Movie cast list
+    var casts: [Cast]? {
+        didSet {
+            onChange?(.casts(casts))
+        }
+    }
+
+    var selectedCast: Cast? {
+        didSet {
+            guard let selectedCast = selectedCast,
+                  let identifier = selectedCast.identifier else {
+                return
+            }
+            onChange?(.selectedCast(identifier))
         }
     }
 }
