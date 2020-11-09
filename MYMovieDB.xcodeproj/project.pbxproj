@@ -64,6 +64,7 @@
 		8CEBE5CA2558A243006A5FAE /* MovieCreditsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5C92558A243006A5FAE /* MovieCreditsRequest.swift */; };
 		8CEBE5CF2558A28C006A5FAE /* MovieCreditsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5CE2558A28C006A5FAE /* MovieCreditsResponse.swift */; };
 		8CEBE5D52558A2A1006A5FAE /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5D42558A2A1006A5FAE /* Cast.swift */; };
+		8CEBE5EF2559396A006A5FAE /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5EE2559396A006A5FAE /* UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		8CEBE5C92558A243006A5FAE /* MovieCreditsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsRequest.swift; sourceTree = "<group>"; };
 		8CEBE5CE2558A28C006A5FAE /* MovieCreditsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsResponse.swift; sourceTree = "<group>"; };
 		8CEBE5D42558A2A1006A5FAE /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		8CEBE5EE2559396A006A5FAE /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				8CEBE4BC25572D7E006A5FAE /* Optional.swift */,
 				8CEBE57B2558251E006A5FAE /* String.swift */,
 				8CEBE4C925573337006A5FAE /* UIActivityIndicatorView.swift */,
+				8CEBE5EE2559396A006A5FAE /* UICollectionView.swift */,
 				8CEBE475255717ED006A5FAE /* UIColor.swift */,
 				8CEBE48725571B16006A5FAE /* UINavigationBar.swift */,
 				8CEBE532255801E3006A5FAE /* UITableView.swift */,
@@ -557,6 +560,7 @@
 				8CEBE5BF25587BE6006A5FAE /* MovieDetailViewState.swift in Sources */,
 				8CEBE4362556E224006A5FAE /* MoviePopularListResponse.swift in Sources */,
 				8CEBE3CF2556BA69006A5FAE /* Network.swift in Sources */,
+				8CEBE5EF2559396A006A5FAE /* UICollectionView.swift in Sources */,
 				8CEBE56E25581C44006A5FAE /* DateFormattingHelper.swift in Sources */,
 				8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */,
 				8CEBE5D52558A2A1006A5FAE /* Cast.swift in Sources */,
