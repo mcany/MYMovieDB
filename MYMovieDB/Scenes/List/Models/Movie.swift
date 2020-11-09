@@ -17,7 +17,8 @@ struct Movie: Decodable {
         case releaseDateString = "release_date"
         case backdropPath = "backdrop_path"
         case overview
-        case video
+        case hasVideo = "video"
+        case rating = "vote_average"
     }
 
     /// Identifier
@@ -35,10 +36,15 @@ struct Movie: Decodable {
     /// Poster path
     let releaseDateString: String?
 
-    /// Backdrop iamge path
+    /// Backdrop image path
     let backdropPath: String?
 
+    /// Overview info
     let overview: String?
 
-    let video: Bool?
+    /// Indicates if movie has a video
+    let hasVideo: Bool?
+
+    /// Rating
+    let rating: Double?
 }

@@ -23,6 +23,8 @@ final class ListViewTableViewCell: UITableViewCell {
         }
     }
 
+    // MARK: Properties
+
     private let thumbnailImageView: ImageView = {
         let imageView = ImageView(frame: .zero)
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +82,8 @@ final class ListViewTableViewCell: UITableViewCell {
         imageView.image = UIImage(named: "chevronRight")
         return imageView
     }()
+
+    // MARK: Lifecycle
 
     override init(style: UITableViewCell.CellStyle = .default,
                   reuseIdentifier: String?) {
@@ -176,6 +180,6 @@ private extension ListViewTableViewCell {
     }
 }
 
-// MARK: Private Reusable
+// MARK: Reusable
 
 extension ListViewTableViewCell: Reusable { }

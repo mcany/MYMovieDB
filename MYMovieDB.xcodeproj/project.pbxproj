@@ -81,6 +81,8 @@
 		8CEBE65325597B67006A5FAE /* SearchMultiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE65225597B67006A5FAE /* SearchMultiRequest.swift */; };
 		8CEBE65825597BCF006A5FAE /* SearchMultiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE65725597BCF006A5FAE /* SearchMultiResponse.swift */; };
 		8CEBE65D25597C3F006A5FAE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE65C25597C3F006A5FAE /* Result.swift */; };
+		8CEBE66225598249006A5FAE /* ResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE66125598249006A5FAE /* ResultViewData.swift */; };
+		8CEBE66A25598359006A5FAE /* ListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE66925598359006A5FAE /* ListViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +183,8 @@
 		8CEBE65225597B67006A5FAE /* SearchMultiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMultiRequest.swift; sourceTree = "<group>"; };
 		8CEBE65725597BCF006A5FAE /* SearchMultiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMultiResponse.swift; sourceTree = "<group>"; };
 		8CEBE65C25597C3F006A5FAE /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		8CEBE66125598249006A5FAE /* ResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewData.swift; sourceTree = "<group>"; };
+		8CEBE66925598359006A5FAE /* ListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +356,8 @@
 				8CEBE43B2556E2C9006A5FAE /* Movie.swift */,
 				8CEBE56025581ABF006A5FAE /* MovieViewData.swift */,
 				8CEBE65C25597C3F006A5FAE /* Result.swift */,
+				8CEBE66125598249006A5FAE /* ResultViewData.swift */,
+				8CEBE66925598359006A5FAE /* ListViewData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -657,6 +663,7 @@
 				8CEBE5412558080D006A5FAE /* ImageView.swift in Sources */,
 				8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
+				8CEBE66225598249006A5FAE /* ResultViewData.swift in Sources */,
 				8CEBE60525595E5F006A5FAE /* MovieDetailRouting.swift in Sources */,
 				8CEBE533255801E3006A5FAE /* UITableView.swift in Sources */,
 				8CEBE54B2558088C006A5FAE /* ImageRequest.swift in Sources */,
@@ -666,6 +673,7 @@
 				8CEBE65325597B67006A5FAE /* SearchMultiRequest.swift in Sources */,
 				8CEBE5B725587A90006A5FAE /* MovieDetailDataProtocol.swift in Sources */,
 				8CEBE47125571447006A5FAE /* Theme.swift in Sources */,
+				8CEBE66A25598359006A5FAE /* ListViewData.swift in Sources */,
 				8CEBE41A2556DF37006A5FAE /* Response.swift in Sources */,
 				8CEBE65D25597C3F006A5FAE /* Result.swift in Sources */,
 				8CEBE56125581ABF006A5FAE /* MovieViewData.swift in Sources */,

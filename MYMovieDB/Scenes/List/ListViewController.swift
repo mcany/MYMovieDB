@@ -26,6 +26,20 @@ final class ListViewController: ViewController {
         return tableView
     }()
 
+    private lazy var tableHeaderView: UIView = {
+        let view = UIView(frame: .zero)
+        view.addSubview(searchBar)
+        view.dock(view: searchBar)
+        return view
+    }()
+
+    private lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar(frame: .zero)
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        searchBar.applyStyling()
+        return searchBar
+    }()
+
     // MARK: Lifecycle
 
     init(with viewModel: ListViewProtocol, router: ListViewRouting) {
@@ -49,11 +63,22 @@ final class ListViewController: ViewController {
         }
         viewModel.fetchMovies()
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateTableHeaderView()
+    }
 }
 
 // MARK: Private Helpers
 
 private extension ListViewController {
+
+    func updateTableHeaderView() {
+        let headerView = tableView.tableHeaderView
+        headerView?.my_sizeToFit()
+        tableView.tableHeaderView = headerView
+    }
 
     func prepareViews() {
 
@@ -62,8 +87,29 @@ private extension ListViewController {
 
         view.addSubview(tableView)
         view.dock(view: tableView)
+        tableView.tableHeaderView = tableHeaderView
         tableView.dataSource = self
         tableView.delegate = self
+
+        searchBar.placeholder = "Search"
+        searchBar.showsCancelButton = true
+        searchBar.delegate = self
+        //        navigationItem.titleView = searchBar
+    }
+}
+
+// MARK: UISearchBarDelegate
+
+extension ListViewController: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.search(with: searchText)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.endEditing(true)
+        viewModel.search(with: nil)
     }
 }
 
@@ -73,15 +119,15 @@ extension ListViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return viewModel.movieCount
+        return viewModel.listCount(at: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell: ListViewTableViewCell = tableView.my_dequeueReusableCell(for: indexPath)
-        let movie = viewModel.movie(at: indexPath.row)
-        cell.configure(imagePath: movie?.posterPath)
-        cell.configure(title: movie?.title)
+        let movie = viewModel.listItem(at: indexPath)
+        cell.configure(imagePath: movie?.imagePath)
+        cell.configure(title: movie?.name)
         cell.configure(date: movie?.releaseDate)
         return cell
     }
@@ -91,8 +137,17 @@ extension ListViewController: UITableViewDataSource {
 
 extension ListViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.segmentTitle(at: section)
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.segmentCount
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.selectMovie(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
@@ -111,12 +166,16 @@ private extension ListViewController {
                                message: "Movie list is empty or cannot be loaded!")
             } else {
                 tableView.reloadData()
+                tableView.layoutIfNeeded()
+                tableView.contentOffset = .zero
             }
         case .selectedMovieID(let movieID):
             guard let navigationController = navigationController else {
                 return
             }
             router.proceedToMovieDetail(current: navigationController, movieID: movieID)
+        case .results:
+            tableView.reloadData()
         }
     }
 }

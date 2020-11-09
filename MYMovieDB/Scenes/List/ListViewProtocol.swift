@@ -5,21 +5,35 @@
 //  Created by Mertcan Yigin on 7.11.2020.
 //
 
+import Foundation
+
 protocol ListViewProtocol {
 
     /// State change handler to handle changes
     var stateChangeHandler: ListViewStateOnChange? { get set }
 
-    /// Number of movies in the view
-    var movieCount: Int { get }
+    /// List segment count in the view
+    var segmentCount: Int { get }
 
-    /// Returns movie at given index if any
-    /// - Parameter index: Index number of the movie
-    func movie(at index: Int) -> MovieViewData?
+    /// Returns  list count in the view List count in the view
+    /// - Parameter indexPath: Section
+    func listCount(at section: Int) -> Int
+
+    /// Returns list item at given index if any
+    /// - Parameter indexPath: IndexPath number of the item
+    func listItem(at indexPath: IndexPath) -> ListViewData?
+
+    /// Returns segment title at given index if any
+    /// - Parameter index: Index number of the item
+    func segmentTitle(at index: Int) -> String?
 
     /// User selection index
     /// - Parameter index: Index number of the movie
     func selectMovie(at index: Int)
+
+    /// Begins search with given keyword
+    /// - Parameter keyword: Search keyword
+    func search(with keyword: String?)
 
     /// Fetches movies
     func fetchMovies()

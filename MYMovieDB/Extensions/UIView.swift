@@ -21,4 +21,13 @@ extension UIView {
         }
         return all
     }
+
+    func my_sizeToFit() {
+        setNeedsLayout()
+        layoutIfNeeded()
+        let height = systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        var newFrame = frame
+        newFrame.size.height = height
+        frame = newFrame
+    }
 }

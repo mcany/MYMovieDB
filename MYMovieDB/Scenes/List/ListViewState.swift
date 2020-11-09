@@ -14,6 +14,12 @@ final class ListViewState {
         case loading(Bool)
         case movies([Movie]?)
         case selectedMovieID(Int)
+        case results([Result])
+    }
+
+    enum ViewType {
+        case list
+        case search
     }
 
     /// On change listener function
@@ -40,6 +46,24 @@ final class ListViewState {
                 return
             }
             onChange?(.selectedMovieID(movie.identifier))
+        }
+    }
+
+    var viewType: ViewType = .list {
+        didSet {
+            if viewType == .list {
+                onChange?(.movies(movies))
+
+            }
+        }
+    }
+
+    var results: [Result]? {
+        didSet {
+            guard let results = results else {
+                return
+            }
+            onChange?(.results(results))
         }
     }
 }

@@ -22,6 +22,7 @@ extension UISearchBar {
     }
 
     func applyStyling() {
+
         backgroundColor = .clear
         barTintColor = .clear
         backgroundImage = UIImage()
@@ -30,7 +31,6 @@ extension UISearchBar {
         my_textField.backgroundColor = Theme.SearchBar.background
         my_textField.textColor = Theme.SearchBar.label
         my_textField.layer.cornerRadius = 18
-        my_textField.layer.borderWidth = 1.0
         my_textField.clipsToBounds = true
     }
 }

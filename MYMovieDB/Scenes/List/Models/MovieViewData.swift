@@ -10,13 +10,13 @@ import Foundation
 /**
  Represents a `Movie` object displayed on the user interface
  */
-final class MovieViewData {
+final class MovieViewData: ListViewData {
 
     private let movie: Movie
 
     private let releaseDateDate: Date?
 
-    var title: String? {
+    var name: String? {
         return movie.title
     }
 
@@ -24,7 +24,7 @@ final class MovieViewData {
         return releaseDateDate?.toString()
     }
 
-    var posterPath: String? {
+    var imagePath: String? {
         return movie.posterPath
     }
 
@@ -34,6 +34,21 @@ final class MovieViewData {
 
     var overview: String? {
         return movie.overview
+    }
+
+    var hasVideo: Bool {
+        return movie.hasVideo ?? false
+    }
+
+    var rating: String {
+        guard let rating = movie.rating else {
+            return "-"
+        }
+        return String(rating)
+    }
+
+    var mediaType: MediaType? {
+        return .movie
     }
 
     init(movie: Movie) {
