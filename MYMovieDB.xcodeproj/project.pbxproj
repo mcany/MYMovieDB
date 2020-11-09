@@ -66,10 +66,14 @@
 		8CEBE5D52558A2A1006A5FAE /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5D42558A2A1006A5FAE /* Cast.swift */; };
 		8CEBE5E7255923D1006A5FAE /* MovieDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5E6255923D1006A5FAE /* MovieDetailCollectionViewCell.swift */; };
 		8CEBE5EF2559396A006A5FAE /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE5EE2559396A006A5FAE /* UICollectionView.swift */; };
+		8CEBE60A25595E73006A5FAE /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE60925595E73006A5FAE /* PersonDetailViewController.swift */; };
 		8CEBE61325595EFE006A5FAE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE61225595EFE006A5FAE /* Person.swift */; };
 		8CEBE61C25595F6C006A5FAE /* PersonDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE61B25595F6C006A5FAE /* PersonDetailRequest.swift */; };
 		8CEBE62425595FBB006A5FAE /* PersonDetailDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE62325595FBB006A5FAE /* PersonDetailDataController.swift */; };
 		8CEBE62925595FF6006A5FAE /* PersonDetailDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE62825595FF6006A5FAE /* PersonDetailDataProtocol.swift */; };
+		8CEBE62E255960B2006A5FAE /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE62D255960B2006A5FAE /* PersonDetailViewModel.swift */; };
+		8CEBE633255960E2006A5FAE /* PersonDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE632255960E2006A5FAE /* PersonDetailViewState.swift */; };
+		8CEBE63B25596550006A5FAE /* PersonDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEBE63A25596550006A5FAE /* PersonDetailViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,10 +159,14 @@
 		8CEBE5D42558A2A1006A5FAE /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		8CEBE5E6255923D1006A5FAE /* MovieDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CEBE5EE2559396A006A5FAE /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		8CEBE60925595E73006A5FAE /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		8CEBE61225595EFE006A5FAE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		8CEBE61B25595F6C006A5FAE /* PersonDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailRequest.swift; sourceTree = "<group>"; };
 		8CEBE62325595FBB006A5FAE /* PersonDetailDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailDataController.swift; sourceTree = "<group>"; };
 		8CEBE62825595FF6006A5FAE /* PersonDetailDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailDataProtocol.swift; sourceTree = "<group>"; };
+		8CEBE62D255960B2006A5FAE /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
+		8CEBE632255960E2006A5FAE /* PersonDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewState.swift; sourceTree = "<group>"; };
+		8CEBE63A25596550006A5FAE /* PersonDetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,6 +421,10 @@
 		8CEBE5FB25595E27006A5FAE /* Person Detail View */ = {
 			isa = PBXGroup;
 			children = (
+				8CEBE60925595E73006A5FAE /* PersonDetailViewController.swift */,
+				8CEBE62D255960B2006A5FAE /* PersonDetailViewModel.swift */,
+				8CEBE63A25596550006A5FAE /* PersonDetailViewProtocol.swift */,
+				8CEBE632255960E2006A5FAE /* PersonDetailViewState.swift */,
 				8CEBE61125595EE8006A5FAE /* Models */,
 				8CEBE61A25595F50006A5FAE /* Network */,
 			);
@@ -610,11 +622,14 @@
 				8CEBE4362556E224006A5FAE /* MoviePopularListResponse.swift in Sources */,
 				8CEBE3CF2556BA69006A5FAE /* Network.swift in Sources */,
 				8CEBE5EF2559396A006A5FAE /* UICollectionView.swift in Sources */,
+				8CEBE62E255960B2006A5FAE /* PersonDetailViewModel.swift in Sources */,
 				8CEBE56E25581C44006A5FAE /* DateFormattingHelper.swift in Sources */,
 				8CEBE476255717ED006A5FAE /* UIColor.swift in Sources */,
 				8CEBE5E7255923D1006A5FAE /* MovieDetailCollectionViewCell.swift in Sources */,
 				8CEBE5D52558A2A1006A5FAE /* Cast.swift in Sources */,
 				8CEBE62425595FBB006A5FAE /* PersonDetailDataController.swift in Sources */,
+				8CEBE63B25596550006A5FAE /* PersonDetailViewProtocol.swift in Sources */,
+				8CEBE633255960E2006A5FAE /* PersonDetailViewState.swift in Sources */,
 				8CEBE5412558080D006A5FAE /* ImageView.swift in Sources */,
 				8CEBE4AD25572797006A5FAE /* Layout.swift in Sources */,
 				8CEBE3C92556B79F006A5FAE /* AppRouter.swift in Sources */,
@@ -641,6 +656,7 @@
 				8CEBE5CA2558A243006A5FAE /* MovieCreditsRequest.swift in Sources */,
 				8CEBE59C25583A0B006A5FAE /* ListViewRouter.swift in Sources */,
 				8CEBE4CA25573337006A5FAE /* UIActivityIndicatorView.swift in Sources */,
+				8CEBE60A25595E73006A5FAE /* PersonDetailViewController.swift in Sources */,
 				8CE0EF5825569DD200F5C130 /* AppDelegate.swift in Sources */,
 				8CEBE3C42556B719006A5FAE /* ListViewController.swift in Sources */,
 				8CEBE55C25581A08006A5FAE /* Genre.swift in Sources */,
