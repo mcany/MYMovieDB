@@ -140,6 +140,7 @@ private extension ListViewModel {
         personResults = results.filter { result in
             result.mediaType == .person
         }
+        state.results = results
     }
 }
 
@@ -157,7 +158,6 @@ extension ListViewModel {
 
     private func fetchSearch(with keyword: String) {
         dataController.search(keyword) { [weak self] (reponse, _) in
-            self?.state.results = reponse?.results
             self?.update(reponse?.results)
         }
     }

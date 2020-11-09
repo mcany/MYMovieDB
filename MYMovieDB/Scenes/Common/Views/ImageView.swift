@@ -28,6 +28,7 @@ final class ImageView: UIImageView {
     var imagePath: String? {
         didSet {
             guard let path = imagePath else {
+                image = nil
                 return
             }
             activityIndicatorView.startAnimating()
