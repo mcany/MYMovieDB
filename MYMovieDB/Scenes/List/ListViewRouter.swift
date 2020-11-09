@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ListRouter: ListViewRouting {
+struct ListRouter: ListViewRouting {
 
     func proceedToItemDetail(current: UINavigationController,
                              mediaType: MediaType?,

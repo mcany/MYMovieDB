@@ -5,7 +5,7 @@
 //  Created by Mertcan Yigin on 9.11.2020.
 //
 
-final class SearchMultiRequest: Request {
+struct SearchMultiRequest: Request {
 
     private enum Parameter {
 

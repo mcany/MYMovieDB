@@ -5,7 +5,7 @@
 //  Created by Mertcan Yigin on 9.11.2020.
 //
 
-final class PersonDetailDataController: PersonDetailDataProtocol {
+struct PersonDetailDataController: PersonDetailDataProtocol {
 
     func fetchPersonDetail(personID: Int, completion: @escaping FetchPersonDetailCompletion) {
 

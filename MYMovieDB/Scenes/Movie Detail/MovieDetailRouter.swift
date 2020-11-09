@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MovieDetailRouter: MovieDetailRouting {
+struct MovieDetailRouter: MovieDetailRouting {
 
     func proceedToPersonDetail(current: UINavigationController, personID: Int) {
         let dataController = PersonDetailDataController()

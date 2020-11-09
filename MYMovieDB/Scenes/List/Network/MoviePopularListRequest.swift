@@ -5,7 +5,7 @@
 //  Created by Mertcan Yigin on 7.11.2020.
 //
 
-final class MoviePopularListRequest: Request {
+struct MoviePopularListRequest: Request {
 
     private enum Parameter {
 

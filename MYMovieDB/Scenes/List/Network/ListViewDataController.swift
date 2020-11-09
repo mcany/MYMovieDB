@@ -5,7 +5,7 @@
 //  Created by Mertcan Yigin on 7.11.2020.
 //
 
-final class ListViewDataController: ListViewDataProtocol {
+struct ListViewDataController: ListViewDataProtocol {
 
     /// Fetches movie list with given parameters
     /// - Parameters:

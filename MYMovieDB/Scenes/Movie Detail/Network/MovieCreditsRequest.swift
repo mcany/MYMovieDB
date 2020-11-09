@@ -5,7 +5,7 @@
 //  Created by Mertcan Yigin on 9.11.2020.
 //
 
-final class MovieCreditsRequest: Request {
+struct MovieCreditsRequest: Request {
 
     private enum Parameter {
 

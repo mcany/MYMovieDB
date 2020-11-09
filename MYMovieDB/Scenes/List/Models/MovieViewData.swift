@@ -10,7 +10,7 @@ import Foundation
 /**
  Represents a `Movie` object displayed on the user interface
  */
-final class MovieViewData: ListViewData {
+struct MovieViewData: ListViewData {
 
     private let movie: Movie
 

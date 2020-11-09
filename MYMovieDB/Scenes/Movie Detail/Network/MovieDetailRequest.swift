@@ -5,7 +5,7 @@
 //  Created by Mertcan Yigin on 8.11.2020.
 //
 
-final class MovieDetailRequest: Request {
+struct MovieDetailRequest: Request {
 
     private enum Parameter {
 

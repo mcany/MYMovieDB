@@ -8,7 +8,7 @@
 /**
  Represents a `Result` object displayed on the user interface
  */
-final class ResultViewData: ListViewData {
+struct ResultViewData: ListViewData {
 
     private let result: Result
 
