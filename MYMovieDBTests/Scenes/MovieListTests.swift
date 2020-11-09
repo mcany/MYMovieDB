@@ -61,7 +61,8 @@ final class MovieListTests: XCTestCase {
         XCTAssertTrue(box.changes.count == 3)
         XCTAssertTrue(box.changes[0] == Change.loading(true))
         XCTAssertTrue(box.changes[1] == Change.loading(false))
-        XCTAssertTrue(box.changes[2] == Change.movies([movie1, movie2]))
+        XCTAssertTrue(box.changes[2] == Change.listItems([MovieViewData(movie: movie1),
+                                                          MovieViewData(movie: movie2)]))
     }
 
     func testFetcSearch() {
@@ -100,7 +101,8 @@ final class MovieListTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
         XCTAssertTrue(box.changes.count == 3)
         XCTAssertTrue(box.changes[1] == Change.viewType)
-        XCTAssertTrue(box.changes[2] == Change.results([result1, result2]))
+        XCTAssertTrue(box.changes[2] == Change.listItems([ResultViewData(result: result1),
+                                                          ResultViewData(result: result2)]))
     }
 }
 
@@ -114,15 +116,9 @@ extension ListViewState.Change: Equatable {
         case let ((.loading(lhsState)),
                   (.loading(rhsState))):
             return lhsState == rhsState
-        case let ((.movies(lhsState)),
-                  (.movies(rhsState))):
+        case let ((.listItems(lhsState)),
+                  (.listItems(rhsState))):
             return lhsState?.count == rhsState?.count
-        case let ((.selectedMovieID(lhsState)),
-                  (.selectedMovieID(rhsState))):
-            return lhsState == rhsState
-        case let ((.results(lhsState)),
-                  (.results(rhsState))):
-            return lhsState.count == rhsState.count
         case ((.viewType),
               (.viewType)):
             return true
